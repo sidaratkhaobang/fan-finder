@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>FAN FINDER</title>
+
+  <link rel="stylesheet" href="css/style.css?v=1.0">
+</head>
+
+<body>
+  <section id="page">
+    <section id="header">
+      <img src="images/cover.jpg" alt="Fan Finder" />
+    </section>
+    <section id="content">
+      <h2>คำใบ้ 3 ข้อเกี่ยวกับ 'เนื้อคู่' ของคุณ!!!</h2>
+      เนื้อคู่ของคุณจะเป็นใครกันนะ
+      <section id="form">
+        <div class="form-control">
+          <label>ชื่อ - นามสกุล</label>
+          <input type="text" id="name">
+        </div>
+        <div class="form-control">
+          <label>เบอร์โทรศัพท์</label>
+          <input type="text" id="phone">
+        </div>
+        <div class="form-control">
+          <label>วัน เดือน ปี เกิด</label>
+          <input type="text" id="birthdate">
+        </div>
+        <button onClick="predict()" id="predict">นึกถึงเนื้อคู่ แล้วกดเบาๆ...</button>
+      </section>
+    </section>
+    <section id="result" class="hidden">
+      เนื้อคู่ของคุณจะเป็นชาว <span id="nationality"></span> ที่ <span id="place"></span> กำลัง <span id="action"></span> อยู่
+    </section>
+  </section>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
