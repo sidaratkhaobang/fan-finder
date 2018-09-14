@@ -1,14 +1,13 @@
 <?php
 
-
-Class FanModel
+class FanModel
 {
     public static function predict($name, $lastname, $dob, $mobileno)
     {
         return [
             "nationality" => 'อังกฤษ',
             "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่' 
+            'action' => 'ปิ้งไก่',
         ];
     }
 

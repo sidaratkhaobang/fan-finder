@@ -7,7 +7,7 @@ $app = new \Klein\Klein();
 $app->respond('GET', '/', function ($request, $response) {
     return $response->json([
         "status" => "ok",
-        "message"=> "hello world"
+        "message" => "hello world",
     ]);
 });
 
