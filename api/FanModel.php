@@ -2,7 +2,7 @@
 
 class FanModel
 {
-    public static function predict($name, $lastname, $dob, $mobileno)
+    public static function predict($name, $dob, $mobileno)
     {
         return [
             "nationality" => 'อังกฤษ',
@@ -11,7 +11,7 @@ class FanModel
         ];
     }
 
-    public static function getNationality($name, $lastname)
+    public static function getNationality($name)
     {
         // TODO
     }
