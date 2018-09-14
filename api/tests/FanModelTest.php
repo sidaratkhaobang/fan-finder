@@ -11,7 +11,7 @@ final class FanModelTest extends TestCase
             "place" => 'ยอดดอยอันหนาวเหน็บ',
             'action' => 'ปิ้งไก่' 
         ];
-        $result = FanModel::predict($name, $lastname, $dob, $mobileno);
+        $result = FanModel::predict($name, $dob, $mobileno);
         $this->assertEquals($expected_result, $result);
     }
 }
