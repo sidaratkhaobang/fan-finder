@@ -14,6 +14,16 @@ class FanModel
     public static function getNationality($name)
     {
         // TODO
+        // 1-5 : เกาหลี
+        // 6/10 : ไทย
+        // 11/15 : วากานด้า
+        // 16/20 : จีน
+        // 21++  : คองโก
+        $name_length = mb_strlen($name);
+        if ($name_length <= 5){
+            $nationality = 'เกาหลี';
+        }
+        return $nationality;
     }
 
     public static function getPlace($dob)
