@@ -32,7 +32,7 @@ final class FanModelTest extends TestCase
     public function testGetNationality_NameLength12()
     {
         $expected_result = 'วากานด้า';
-        $result = FanModel::getNationality('หมีน้อยผู้น่ารัก');
+        $result = FanModel::getNationality('หมีน้อยคนสวย');
         $this->assertEquals($expected_result, $result);
     }
 
@@ -43,10 +43,80 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
 
-    public function testGetNationality_NameLength22()
+    public function testGetNationality_NameLength25()
     {
         $expected_result = 'คองโก';
         $result = FanModel::getNationality('กรุงเทพมหานครอมรรัตนโกสิน');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score0()
+    {
+        $expected_result = 'สระว่ายน้ำ';
+        $result = FanModel::getPlace('0');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score1()
+    {
+        $expected_result = 'ห้องเรียน';
+        $result = FanModel::getPlace('1');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score2()
+    {
+        $expected_result = 'โรงอาหาร';
+        $result = FanModel::getPlace('2');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score3()
+    {
+        $expected_result = 'สนามกีฬา';
+        $result = FanModel::getPlace('3');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score4()
+    {
+        $expected_result = 'สนามฟุตบอล';
+        $result = FanModel::getPlace('4');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score5()
+    {
+        $expected_result = 'หอดูดาว';
+        $result = FanModel::getPlace('5');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score6()
+    {
+        $expected_result = 'สนามเทนนิส';
+        $result = FanModel::getPlace('6');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score7()
+    {
+        $expected_result = 'ห้องสมุด';
+        $result = FanModel::getPlace('7');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score8()
+    {
+        $expected_result = 'โลตัส';
+        $result = FanModel::getPlace('8');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testPlace_score9()
+    {
+        $expected_result = 'โรงพยาบาล';
+        $result = FanModel::getPlace('9');
         $this->assertEquals($expected_result, $result);
     }
 } 
