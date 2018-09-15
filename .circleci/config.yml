@@ -31,7 +31,7 @@ jobs:
       - run:
           name: Re-build services in docker containers
           command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/test; docker-compose up --build -d"
-      - run: echo "docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
+      - run: echo "docker exec test_api_1 composer install"
       - run:
           name: Install PHP dependencies
           # command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/test; docker exec fanfinder<TEAMNAME>_api_1 composer install"
