@@ -44,4 +44,21 @@ final class FanModelTest extends TestCase
         $result = FanModel::getNationality('ดอกดอดอกหมวยดอกดอกดอก');
         $this->assertEquals($expected_result,$result);
     }   
+
+    public function testGetplace_datesumcase0(){
+        $expected_result = 'สมุย';
+        $result = FanModel::getPlace("01/09/1540");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetplace_datesumcase0(){
+        $expected_result = 'สมุย';
+        $result = FanModel::getPlace("01/09/1540");
+        $this->assertEquals($expected_result, $result);
+    }
+    // public function testGetplace_datesumcase1(){
+    //     $expected_result = 'ในพุ้ม';
+    //     $result = FanModel::getPlace("01/09/2540");
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    
 }
