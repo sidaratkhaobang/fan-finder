@@ -20,4 +20,4 @@ jobs:
       - run: wget https://phar.phpunit.de/phpunit-6.5.phar
       - run: chmod +x phpunit-6.5.phar
       - run: mv phpunit-6.5.phar ./api/phpunit
-      - run: cd api && phpunit
+      - run: cd api && ./phpunit
