@@ -67,6 +67,24 @@ class FanModel
         else if ($mod == 3) {
             $place = 'อาคารรวม5';
         }
+        else if ($mod == 4) {
+            $place = 'อาคารรวม7';
+        }
+        else if ($mod == 5) {
+            $place = 'อาคารรวม1';
+        }
+        else if ($mod == 6) {
+            $place = 'ไทยบุรี';
+        }
+        else if ($mod == 7) {
+            $place = 'ศุนย์คอม';
+        }
+        else if ($mod == 8) {
+            $place = '7-11';
+        }
+        else if ($mod == 9) {
+            $place = 'family mart';
+        }
 
         return $place;
     }
