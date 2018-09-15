@@ -93,9 +93,64 @@ final class FanModelTest extends TestCase
         $expected_result ='ทะเล';
         $result =FanModel::getplace('08/03/2500');
         $this->assertEquals($expected_result,$result);
-    }public function testGetPlace9(){
+    }
+    public function testGetPlace9(){
         $expected_result ='สวรรค์ชั้น7';
         $result =FanModel::getplace('09/03/2500');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean10()
+    {
+        $expected_result ='ปิ้งกบ';
+        $result =FanModel::getAction('080-000-0002');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean20()
+    {
+        $expected_result ='จับไก่';
+        $result =FanModel::getAction('080-200-0055');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean30()
+    {
+        $expected_result ='นอนหลับ';
+        $result =FanModel::getAction('082-325-0055');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean40()
+    {
+        $expected_result ='ล่าเสือ';
+        $result =FanModel::getAction('082-555-5055');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean50()
+    {
+        $expected_result ='เล่น PubG';
+        $result =FanModel::getAction('092-919-1955');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean60()
+    {
+        $expected_result ='นอนแมว';
+        $result =FanModel::getAction('088-545-6789');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean70()
+    {
+        $expected_result ='ย่างไก่';
+        $result =FanModel::getAction('099-948-6799');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean80()
+    {
+        $expected_result ='กินข้าว';
+        $result =FanModel::getAction('089-999-9999');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testgetActionMean90()
+    {
+        $expected_result ='ปีนต้นไม้';
+        $result =FanModel::getAction('999-999-9999');
         $this->assertEquals($expected_result,$result);
     }
 }

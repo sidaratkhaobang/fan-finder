@@ -72,5 +72,51 @@ class FanModel
     public static function getAction($mobileno)
     {
         // TODO
+        //081-124-1754 (xxx-xxx-xxxx)
+        //sum = 0+8+1+1+2+4+1+7+5+4
+        //<= 10 :ปิ้งกบ
+        //11-20 :จับไก่
+        //21-30 :นอนหลับ
+        //31-40 :ล่าเสือ
+        //41-50 :เล่น PubG
+        //51-60:นอนแมว
+        //61-70:ย่างไก่
+        //71-80:กินข้าว
+        //>80 :ปีนต้นไม้
+
+        $strMobile = str_replace("-","",$mobileno);
+        $nums = array_map('intval', str_split($strMobile));
+        $sum = array_sum($nums);
+        $action = '';
+        switch($sum)
+        {
+            case $sum <= 10 : 
+                $action = 'ปิ้งกบ';
+                break;
+            case $sum <= 20 :
+                $action = 'จับไก่';
+                break;
+            case $sum <= 30 :
+                $action = 'นอนหลับ';
+                break;       
+            case $sum <= 40 :
+            $action = 'ล่าเสือ';
+            break;  
+            case $sum <= 50 :
+                $action = 'เล่น PubG';
+                break;         
+            case $sum <= 60 :
+            $action = 'นอนแมว';
+            break;  
+            case $sum <= 70 :
+                $action = 'ย่างไก่';
+                break;
+            case $sum <= 80 :
+                $action = 'กินข้าว';
+                break;    
+            default:
+            $action = 'ปีนต้นไม้';
+        }
+        return $action;
     }
 }
