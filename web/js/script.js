@@ -11,11 +11,7 @@ function predict(event) {
   Http.onreadystatechange = function() {
     if (this.readyState === 4 && this.status === 200) {
       const resp = JSON.parse(Http.responseText);
-      console.log(resp);
       const { nationality, place, action } = resp.data;
-      document.getElementById("nationality").innerHTML = nationality;
-      document.getElementById("place").innerHTML = place;
-      document.getElementById("action").innerHTML = action;
       const result_url = `result.html?nationality=${nationality}&place=${place}&action=${action}`;
       window.location = result_url;
     }
