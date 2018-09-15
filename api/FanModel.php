@@ -24,11 +24,11 @@ class FanModel
         $nationality = '';
         if($name_length <= 5  ){
             $nationality = 'เกาหลี';
-        }elseif($name_length <= 10 ){
+        }else if($name_length <= 10 ){
             $nationality = 'ไทย';
-        }elseif($name_length <= 15 ){
+        }else if($name_length <= 15 ){
             $nationality = 'วากานด้า';
-        }elseif($name_length <= 20 ){
+        }else if($name_length <= 20 ){
             $nationality = 'จีน';
         }else{
             $nationality = 'ชาติหน้า';
