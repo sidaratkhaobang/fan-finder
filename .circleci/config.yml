@@ -10,11 +10,11 @@ jobs:
       - run: cd api && ls
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-{{ checksum "api/composer.json" }}
           - v1-dependencies-
       - run: cd api && composer install -n --prefer-dist
       - save_cache:
           paths:
-            - ./vendor
-          key: v1-dependencies-{{ checksum "composer.json" }}
-      - run: cd api && phpunit
+            - ./api/vendor
+          key: v1-dependencies-{{ checksum "api/composer.json" }}
+      - run: api/vendor/bin/phpunit
