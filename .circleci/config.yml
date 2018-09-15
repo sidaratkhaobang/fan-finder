@@ -4,8 +4,7 @@ jobs:
     docker:
       - image: circleci/php:7.2-browsers
 
-    working_directory: ~/fan-finder
-
+    working_directory: ~/fan-finder/api
     steps:
       - checkout
       - restore_cache:
