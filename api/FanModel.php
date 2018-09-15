@@ -19,7 +19,7 @@ class FanModel
         // 11-15: Vaganda
         // 16-20: Chainese
         // 21++: Conggo
-        $name_lenght = mb_strlen($name):
+        $name_lenght = mb_strlen($name);
         $nationality = '';
         if($name_lenght <= 5){
             $nationality = 'Korea';
@@ -39,6 +39,9 @@ class FanModel
     public static function getPlace($dob)
     {
         // TODO
+        // 11/05/2540 (DD/MM/YYYY)
+        //score = (1+1+0+5+2+5+4+0) %10
+        //Hint: string_replace
     }
 
     public static function getAction($mobileno)
