@@ -46,7 +46,7 @@ class FanModel
         $sum=0;
         $rpDopb = str_replace('/','',$dob);
         $spDob = str_split($rpDopb);
-        $score = array_sum($spDob)%10
+        $score = array_sum($spDob)%10;
         if($score == 9  ){
             $place = 'บางประกง';
         }
