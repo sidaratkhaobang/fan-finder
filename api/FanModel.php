@@ -43,10 +43,27 @@ class FanModel
             $value = $value++ ;
         }
         if ($value = 0){
-
+            $char = "สระว่ายน้ำ";
         }elseif ($value = 1) {
-            
+            $char = "ห้องเรียน";
+        }elseif ($value = 2) {
+            $char = "โรงอาหาร";
+        }elseif ($value = 3) {
+            $char = "สนามกีฬา";
+        }elseif ($value = 4) {
+            $char = "สนามฟุตบอล";
+        }elseif ($value = 5) {
+            $char = "หอดูดาว";
+        }elseif ($value = 6) {
+            $char = "สนามเทนนิส";
+        }elseif ($value = 7) {
+            $char = "ห้องสมุด";
+        }elseif ($value = 8) {
+            $char = "โลตัส";
+        }elseif ($value = 9) {
+            $char = "โรงพยาบาล";
         }
+        $return = $char;
     }
 
     public static function getAction($mobileno)

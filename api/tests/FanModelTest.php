@@ -53,70 +53,70 @@ final class FanModelTest extends TestCase
     public function testPlace_score0()
     {
         $expected_result = 'สระว่ายน้ำ';
-        $result = FanModel::getPlace('0');
+        $result = FanModel::getPlace('00/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score1()
     {
         $expected_result = 'ห้องเรียน';
-        $result = FanModel::getPlace('1');
+        $result = FanModel::getPlace('01/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score2()
     {
         $expected_result = 'โรงอาหาร';
-        $result = FanModel::getPlace('2');
+        $result = FanModel::getPlace('02/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score3()
     {
         $expected_result = 'สนามกีฬา';
-        $result = FanModel::getPlace('3');
+        $result = FanModel::getPlace('03/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score4()
     {
         $expected_result = 'สนามฟุตบอล';
-        $result = FanModel::getPlace('4');
+        $result = FanModel::getPlace('04/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score5()
     {
         $expected_result = 'หอดูดาว';
-        $result = FanModel::getPlace('5');
+        $result = FanModel::getPlace('05/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score6()
     {
         $expected_result = 'สนามเทนนิส';
-        $result = FanModel::getPlace('6');
+        $result = FanModel::getPlace('06/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score7()
     {
         $expected_result = 'ห้องสมุด';
-        $result = FanModel::getPlace('7');
+        $result = FanModel::getPlace('07/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score8()
     {
         $expected_result = 'โลตัส';
-        $result = FanModel::getPlace('8');
+        $result = FanModel::getPlace('08/00/00');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testPlace_score9()
     {
         $expected_result = 'โรงพยาบาล';
-        $result = FanModel::getPlace('9');
+        $result = FanModel::getPlace('09/00/00');
         $this->assertEquals($expected_result, $result);
     }
 } 
