@@ -17,4 +17,7 @@ jobs:
           paths:
             - ./api/vendor
           key: v1-dependencies-{{ checksum "api/composer.json" }}
+      - run: wget https://phar.phpunit.de/phpunit-6.5.phar
+      - run: chmod +x phpunit-6.5.phar
+      - run: mv phpunit-6.5.phar /usr/local/bin/phpunit
       - run: cd api && phpunit
