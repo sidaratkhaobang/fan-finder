@@ -8,6 +8,5 @@ RUN apt-get install -y wget
 # RUN wget https://phar.phpunit.de/phpunit-6.5.phar
 # RUN chmod +x phpunit-6.5.phar
 # RUN mv phpunit-6.5.phar /usr/local/bin/phpunit
-RUN composer install
 
 EXPOSE 80
