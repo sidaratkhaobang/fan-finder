@@ -14,6 +14,26 @@ class FanModel
     public static function getNationality($name)
     {
         // TODO
+        //1-5: Korea
+        //5-10: Thai
+        // 11-15: Vaganda
+        // 16-20: Chainese
+        // 21++: Conggo
+        $name_lenght = mb_strlen($name):
+        $nationality = '';
+        if($name_lenght <= 5){
+            $nationality = 'Korea';
+        }else if($name_lenght <= 10){
+            $nationality = 'Thai';
+        }else if($name_lenght <= 15){
+            $nationality = 'Vaganda';
+        }else if($name_lenght <= 20){
+            $nationality = 'Chainese';
+        }else if($name_lenght >= 21){
+            $nationality = 'Conggo';
+        }
+
+        return $nationality;
     }
 
     public static function getPlace($dob)
