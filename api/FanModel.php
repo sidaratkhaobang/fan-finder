@@ -27,6 +27,14 @@ class FanModel
         elseif($name_length <=10){
             $nationality = 'ไทย';
         }
+        elseif($name_length <=15){
+            $nationality = 'วากานด้า';
+        }
+        elseif($name_length <=20){
+            $nationality = 'จีน';
+        }
+        else
+        $nationality = 'คองโก';
         return $nationality;
     }
 

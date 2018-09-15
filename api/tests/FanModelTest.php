@@ -28,4 +28,25 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result,$result);
 
     }
+    public function testGetNationality_NameLength13()
+    {
+        $expected_result = 'วากานด้า';
+        $result = FanModel::getNationality('หมวยหมกมิกหมก');
+        $this->assertEquals($expected_result,$result);
+
+    }
+    public function testGetNationality_NameLength19()
+    {
+        $expected_result = 'จีน';
+        $result = FanModel::getNationality('หมวยหมกมิกหมกอะโต้ย');
+        $this->assertEquals($expected_result,$result);
+
+    }
+    public function testGetNationality_NameLength26()
+    {
+        $expected_result = 'คองโก';
+        $result = FanModel::getNationality('หมวยหมกมิกหมกอะโต้ยชิกะลูด');
+        $this->assertEquals($expected_result,$result);
+
+    }
 }
