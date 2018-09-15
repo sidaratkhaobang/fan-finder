@@ -23,6 +23,8 @@ jobs:
       - run: cd api && ./phpunit
 
   deployment:
+    machine:
+      enabled: true
     steps:
       - run: echo 'deploying'
       - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker-compose up --build -d"
