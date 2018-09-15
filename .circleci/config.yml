@@ -4,17 +4,17 @@ jobs:
     docker:
       - image: circleci/php:7.2-browsers
 
-    working_directory: ~/fan-finder/api
+    working_directory: ~/fan-finder
     steps:
       - checkout
-      - run: ls
-      # - restore_cache:
-      #     keys:
-      #     - v1-dependencies-{{ checksum "composer.json" }}
-      #     - v1-dependencies-
-      - run: composer install -n --prefer-dist
-      # - save_cache:
-      #     paths:
-      #       - ./vendor
-      #     key: v1-dependencies-{{ checksum "composer.json" }}
-      - run: phpunit
+      - run: cd api && ls
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-
+      - run: cd api && composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: cd api && phpunit
