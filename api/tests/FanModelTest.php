@@ -49,4 +49,53 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result,$result);
 
     }
+    public function testGetPlace0(){
+        $expected_result ='คูน้ำ';
+        $result =FanModel::getplace('0');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace1(){
+        $expected_result ='โรงแรม';
+        $result =FanModel::getplace('1');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace2(){
+        $expected_result ='โรงเรียน';
+        $result =FanModel::getplace('2');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace3(){
+        $expected_result ='ป่า';
+        $result =FanModel::getplace('3');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace4(){
+        $expected_result ='สวนสัตว์';
+        $result =FanModel::getplace('4');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace5(){
+        $expected_result ='สวนสาธารณะ';
+        $result =FanModel::getplace('5');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace6(){
+        $expected_result ='สวนสนุก';
+        $result =FanModel::getplace('6');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace7(){
+        $expected_result ='น้ำตก';
+        $result =FanModel::getplace('7');
+        $this->assertEquals($expected_result,$result);
+    }
+    public function testGetPlace8(){
+        $expected_result ='ทะเล';
+        $result =FanModel::getplace('8');
+        $this->assertEquals($expected_result,$result);
+    }public function testGetPlace9(){
+        $expected_result ='สวรรค์ชั้น7';
+        $result =FanModel::getplace('9');
+        $this->assertEquals($expected_result,$result);
+    }
 }

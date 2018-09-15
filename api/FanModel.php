@@ -42,7 +42,71 @@ class FanModel
     public static function getPlace($dob)
     {
         // TODO
+        // 11/05/2540 (DD/MM/YYYY)
+        // score = (1+1+0+5+2+5+4+0)%10
+        // HINT: str_replace, str_split
+        $date = explode("/",$dob);
+        $day = str_split($date[0]);
+        $month = str_split($date[1]);
+        $year = str_split($date[2]);
+        $sum = 0;
+        $place = '';
+        foreach($day as $value)
+        {
+            $sum = $sum + (int)$value;
+        }
+        foreach($month as $value)
+        {
+            $sum = $sum + (int)$value;
+        }
+        foreach($year as $value)
+        {
+            $sum = $sum + (int)$value;
+        }
+        $score = $sum % 10;
+        if($sum == 0)
+        {
+            $place = 'คูน้ำ';
+        }
+        elseif($sum == 1)
+        {
+            $place = 'โรงแรม';
+        }
+        elseif($sum == 2)
+        {
+            $place = 'โรงเรียน';
+        }
+        elseif($sum == 3)
+        {
+            $place = 'ป่า';
+        }
+        elseif($sum == 4)
+        {
+            $place = 'สวนสัตว์';
+        }
+        elseif($sum == 5)
+        {
+            $place = 'สวนสาธารณะ';
+        }
+        elseif($sum == 6)
+        {
+            $place = 'สวนสนุก';
+        }
+        elseif($sum == 7)
+        {
+            $place = 'น้ำตก';
+        }
+        elseif($sum == 8)
+        {
+            $place = 'ทะเล';
+        }
+        elseif($sum == 9)
+        {
+            $place = 'สวรรค์ชั้น7';
+        }
+        return $place;
     }
+
 
     public static function getAction($mobileno)
     {
