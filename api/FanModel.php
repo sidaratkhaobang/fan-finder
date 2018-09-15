@@ -84,8 +84,8 @@ class FanModel
         //71-80:กินข้าว
         //>80 :ปีนต้นไม้
 
-        $strMobile = str_replace("-","",$mobileno);
-        $nums = array_map('intval', str_split($strMobile));
+        $num_Mobile = str_replace("-","",$mobileno);
+        $nums = str_split($num_Mobile);
         $sum = array_sum($nums);
         $action = '';
         switch($sum)
