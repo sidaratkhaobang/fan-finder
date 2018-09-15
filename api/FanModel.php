@@ -36,34 +36,35 @@ class FanModel
         // 11/05/2540 (DD/MM/YY)
         // score = (1+1+0+5+2+5+4+0)%10
         // HINT : str_replace , 
-        $DMY = $dob;
-        $sum = str_replace('/', '',$DMY);
+        // $DMY = $dob;
+        $sum = str_replace('/', '',$dob);
         $score = str_split($sum);
-        foreach ($score as &$value) {
-            $value = $value++ ;
-        }
-        if ($value = 0){
+        $sumnumber = array_sum($score);
+        // foreach ($score as $value) {
+        //     $value = $value + $value ;
+        // }
+        if ($sumnumber == 0){
             $char = "สระว่ายน้ำ";
-        }elseif ($value = 1) {
+        }elseif ($sumnumber == 1) {
             $char = "ห้องเรียน";
-        }elseif ($value = 2) {
+        }elseif ($sumnumber == 2) {
             $char = "โรงอาหาร";
-        }elseif ($value = 3) {
+        }elseif ($sumnumber == 3) {
             $char = "สนามกีฬา";
-        }elseif ($value = 4) {
+        }elseif ($sumnumber == 4) {
             $char = "สนามฟุตบอล";
-        }elseif ($value = 5) {
+        }elseif ($sumnumber == 5) {
             $char = "หอดูดาว";
-        }elseif ($value = 6) {
+        }elseif ($sumnumber == 6) {
             $char = "สนามเทนนิส";
-        }elseif ($value = 7) {
+        }elseif ($sumnumber == 7) {
             $char = "ห้องสมุด";
-        }elseif ($value = 8) {
+        }elseif ($sumnumber == 8) {
             $char = "โลตัส";
-        }elseif ($value = 9) {
+        }elseif ($sumnumber == 9) {
             $char = "โรงพยาบาล";
         }
-        $return = $char;
+        return $char;
     }
 
     public static function getAction($mobileno)
