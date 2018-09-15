@@ -9,8 +9,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-dependencies-{{ checksum "api/composer.json" }}
-          - v1-dependencies-
+            - v1-dependencies-{{ checksum "api/composer.json" }}
+            - v1-dependencies-
       - run: cd api && composer install -n --prefer-dist
       - save_cache:
           paths:

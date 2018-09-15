@@ -49,10 +49,8 @@ final class FanModelTest extends TestCase
     }
 
     public function testGetPlace(){
-
+        $expected_result = 'อเวจี';
         $result = FanModel::getPlace('15/09/2561');
-        $expected_result = $result;
         $this->assertEquals($expected_result,$result);
-        echo $result;
     }
 }

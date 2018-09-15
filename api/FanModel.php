@@ -44,13 +44,13 @@ class FanModel
         // TODO
         // 11/05/2540 (DD/MM/YYYY)
         // sum = (1+1++5+2+5+4+0)%10
-        for($i =0;$i<=strlen($dob);$i++){
-            if($dob[$i] == "/"){
-                $dob[$i] = 0;
-            }
-            $sum = $dob[$i];
-        }
-        return $sum;
+        $noslash = str_replace('/','',$dob);
+        $sumarray = str_split($noslash,$dob);
+        $sum = sum_array($sumarray);
+
+        $place = ["1","2","3","4","อเวจี","6","7","8","9","0"];
+
+        return $place;
 
     }
 
