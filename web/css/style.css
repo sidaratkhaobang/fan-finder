@@ -58,3 +58,7 @@ body {
 #result span {
   font-weight: 800;
 }
+
+#share {
+  margin: 1em 0;
+}

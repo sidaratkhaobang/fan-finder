@@ -29,10 +29,24 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
 
-    public function testGetPlace_DateOne()
+    public function testGetPlace_DateOne() // :(
     {
         $expected_result = 'สวนผึ้ง';
-        $result = FanModel::getPlace('01/01/2001');
+        $result = FanModel::getPlace('01/01/2001'); // 5%10 = 5
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testGetPlace_DateTwo() // :(
+    {
+        $expected_result = 'ทองผาภูมิ';
+        $result = FanModel::getPlace('11/11/2541'); // 16%10 = 6
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testGetPlace_DateThree() // :(
+    {
+        $expected_result = 'เกาะไหง';
+        $result = FanModel::getPlace('32/33/2018'); // 22%10 = 2
         $this->assertEquals($expected_result, $result);
     }
 }

@@ -7,7 +7,6 @@ function predict(event) {
   const Http = new XMLHttpRequest();
   const url = `http://localhost:2019/fan/predict?name=${name}&mobileno=${phone}&dob=${birthdate}`;
   Http.open("GET", url, true);
-  // Http.withCredentials = "true";
   Http.send();
 
   Http.onreadystatechange = function() {
@@ -18,7 +17,8 @@ function predict(event) {
       document.getElementById("nationality").innerHTML = nationality;
       document.getElementById("place").innerHTML = place;
       document.getElementById("action").innerHTML = action;
-      document.getElementById("result").classList.remove("hidden");
+      const result_url = `result.html?nationality=${nationality}&place=${place}&action=${action}`;
+      window.location = result_url;
     }
   }
 }

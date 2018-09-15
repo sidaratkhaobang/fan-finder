@@ -7,7 +7,6 @@ jobs:
     working_directory: ~/fan-finder
     steps:
       - checkout
-      - run: cd api && ls
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "api/composer.json" }}
