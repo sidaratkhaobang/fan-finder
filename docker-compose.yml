@@ -14,3 +14,4 @@ services:
       - 2019:80
     volumes:
       - ./api:/var/www/html/
+    # command: composer install
