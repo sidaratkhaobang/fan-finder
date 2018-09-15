@@ -13,36 +13,44 @@ class FanModel
 
     public static function getNationality($name)
     {
-        // TODO
-        //1-5: Korea
-        //5-10: Thai
-        // 11-15: Vaganda
-        // 16-20: Chainese
-        // 21++: Conggo
-        $name_lenght = mb_strlen($name);
+        //1-5: เกาหลี
+        //6-10: ไทย
+        //11-15: วากานด้า
+        //16-20: จีน
+        //21++: คองโก
+        $name_length = mb_strlen($name);
         $nationality = '';
-        if($name_lenght <= 5){
-            $nationality = 'Korea';
-        }else if($name_lenght <= 10){
-            $nationality = 'Thai';
-        }else if($name_lenght <= 15){
-            $nationality = 'Vaganda';
-        }else if($name_lenght <= 20){
-            $nationality = 'Chainese';
-        }else if($name_lenght >= 21){
-            $nationality = 'Conggo';
+        if($name_length > 20){
+            $nationality = 'คองโก';
         }
-
+        elseif($name_length >15) {
+            $nationality ='จีน';
+        }
+        elseif($name_length >10) {
+            $nationality ='วากานด้า';
+        }
+        elseif($name_length >5) {
+            $nationality ='ไทย';
+        }
+        else{
+            $nationality ='เกาหลี';
+        }
         return $nationality;
     }
 
     public static function getPlace($dob)
     {
-        // TODO
-        // 11/05/2540 (DD/MM/YYYY)
-        //score = (1+1+0+5+2+5+4+0) %10
-        //Hint: string_replace
-    }
+        // // 11/05/2540 (DD/MM/YYYY)
+        // score = (1+1+0+5+2+5+4+0)%10
+        $number_without_slash = ste_split('/',' ',$dob);
+        $number_array = 
+        $replace =  str_split($dob);
+
+        $day = area[0];
+        $mune = area[1];
+        $year = aeea[2];
+        $score = (1+1+0+5+2+5+4+0)%10; 
+        }
 
     public static function getAction($mobileno)
     {

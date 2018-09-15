@@ -4,8 +4,9 @@ use PHPUnit\Framework\TestCase;
 
 final class FanModelTest extends TestCase
 {
-    public function testPrdict() 
+    public function testPredict(): void
     {
+
         $expected_result = [
             "nationality" => 'อังกฤษ',
             "place" => 'ยอดดอยอันหนาวเหน็บ',
@@ -14,29 +15,34 @@ final class FanModelTest extends TestCase
         $result = FanModel::predict($name, $dob, $mobileno);
         $this->assertEquals($expected_result, $result);
     }
-    public function testgetNationalityleaght4(){
-        $expected_result='Korea';
-        $result = FanModel::$name_lenght(Ween);
+    public function testGetNationality_NameLength4(){
+        $expected_result = 'เกาหลี';
+        $result = FanModel::getNationality('หมวย');
         $this->assertEquals($expected_result, $result);
     }
-    public function testgetNationalityleaght8(){
-        $expected_result='Thai';
-        $result = FanModel::$name_lenght(Weenneen);
+    public function testGetNationality_NameLength7(){
+        $expected_result = 'ไทย';
+        $result = FanModel::getNationality('ดอกหมวย');
         $this->assertEquals($expected_result, $result);
     }
-    public function testgetNationalityleaght13(){
-        $expected_result='Vaganda';
-        $result = FanModel::$name_lenght(elephenbiggie);
+    public function testGetNationality_NameLength11(){
+        $expected_result = 'วากานด้า';
+        $result = FanModel::getNationality('ดอกหมวยอิอิ');
         $this->assertEquals($expected_result, $result);
     }
-    public function testgetNationalityleaght18(){
-        $expected_result='Chinese';
-        $result = FanModel::$name_lenght(KagamiPieroKanashi);
+    public function testGetNationality_NameLength16(){
+        $expected_result = 'จีน';
+        $result = FanModel::getNationality('ดอกหมวยอิอิเหี้ย');
         $this->assertEquals($expected_result, $result);
     }
-    public function testgetNationalityleaght22(){
-        $expected_result='Conggo';
-        $result = FanModel::$name_lenght(KagamiPieroKanashiBoom);
+    public function testGetNationality_NameLength21(){
+        $expected_result = 'ชาติหน้า';
+        $result = FanModel::getNationality('ดอกหมวยอิอิเหี้ยมากๆๆ');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace_DeteOne(){
+        $expected_result = 'ชาติหน้า';
+        $result = FanModel::getNationality('ดอกหมวยอิอิเหี้ยมากๆๆ');
         $this->assertEquals($expected_result, $result);
     }
 }
