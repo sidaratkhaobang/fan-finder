@@ -45,23 +45,13 @@ class FanModel
         // 11/05/2540 (DD/MM/YYYY)
         // score = (1+1+0+5+2+5+4+0)%10
         // HINT: str_replace, str_split
-        $date = explode("/",$dob);
-        $day = str_split($date[0]);
-        $month = str_split($date[1]);
-        $year = str_split($date[2]);
+        $date = str_replace("/","",$dob);
+        $nums = str_split($date);
         $sum = 0;
         $place = '';
-        foreach($day as $value)
+        foreach($nums as $value)
         {
-            $sum = $sum + (int)$value;
-        }
-        foreach($month as $value)
-        {
-            $sum = $sum + (int)$value;
-        }
-        foreach($year as $value)
-        {
-            $sum = $sum + (int)$value;
+            $sum = $sum + intval($value);
         }
         $score = $sum % 10;
         if($sum == 0)
