@@ -34,7 +34,7 @@ jobs:
       - run: echo "docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
       - run:
           name: Install PHP dependencies
-          command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
+          command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker exec fanfindermaster_api_1 composer install"
 
 workflows:
   version: 2
