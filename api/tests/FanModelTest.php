@@ -99,8 +99,58 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_9(){
-        $expected_result = 'ในสวนยาง';
+        $expected_result = 'ที่ห้องแฟนเก่า';
         $result = FanModel :: getPlace('01/08/2549');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_0(){
+        $expected_result = 'เขียนโค้ด';
+        $result = FanModel :: getAction('0867454600'); //0
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_1(){
+        $expected_result = 'ซื้อกาแฟที่ร้าน Amezon';
+        $result = FanModel :: getAction('0867454610'); //1
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_2(){
+        $expected_result = 'ส่งการบ้านอาจารย์อุหมาด';
+        $result = FanModel :: getAction('0867454620'); //2
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_3(){
+        $expected_result = 'เปิดวาปร์อยู่';
+        $result = FanModel :: getAction('0867454630'); //3
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_4(){
+        $expected_result = 'ดูหนังเรื่อง The KaH ';
+        $result = FanModel :: getAction('0867454640'); 
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_5(){
+        $expected_result = 'ทำการบ้าน';
+        $result = FanModel :: getAction('0867454650'); 
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_6(){
+        $expected_result = 'เรียนวิชา Testing';
+        $result = FanModel :: getAction('0867454660'); 
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_7(){
+        $expected_result = 'เข้าห้องน้ำ';
+        $result = FanModel :: getAction('0867454670'); 
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_8(){
+        $expected_result = 'เปิดเว็บ porn';
+        $result = FanModel :: getAction('0867454680'); 
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_9(){
+        $expected_result = 'หลับ';
+        $result = FanModel :: getAction('0867454690'); 
         $this->assertEquals($expected_result, $result);
     }
 }

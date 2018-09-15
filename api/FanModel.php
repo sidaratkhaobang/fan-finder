@@ -63,7 +63,7 @@ class FanModel
             case 6:  $place = 'เล้าหมู';break;
             case 7:  $place = 'ในใจ';break;
             case 8:  $place = 'ในฝัน';break;
-            case 9:  $place = 'ในสวนยาง';break;
+            case 9:  $place = 'ที่ห้องแฟนเก่า';break;
             // default:
         };
         return $place;
@@ -86,6 +86,26 @@ class FanModel
 
     public static function getAction($mobileno)
     {
-        // TODO
+        $sum=0;
+        $number = str_split($mobileno);
+        $action="";
+        foreach ($number as $value) {
+            $sum += intval($value) ;
+        }   
+        $sum=$sum%10; 
+        switch($sum){
+            case 0:  $action = "เขียนโค้ด"; break;
+            case 1:  $action = 'ซื้อกาแฟที่ร้าน Amezon';break;
+            case 2:  $action = 'ส่งการบ้านอาจารย์อุหมาด';break;
+            case 3:  $action = 'เปิดวาปร์อยู่';break;
+            case 4:  $action = 'ดูหนังเรื่อง The KaH ';break;
+            case 5:  $action = 'ทำการบ้าน';break;
+            case 6:  $action = 'เรียนวิชา Testing';break;
+            case 7:  $action = 'เข้าห้องน้ำ';break;
+            case 8:  $action = 'เปิดเว็บ porn';break;
+            case 9:  $action = 'หลับ';break;
+            
+        };
+        return $action;
     }
 }
