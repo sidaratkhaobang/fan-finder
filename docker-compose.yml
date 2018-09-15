@@ -1,10 +1,16 @@
 version: '3'
 services:
+  web:
+    image: nginx:1.15-alpine
+    ports: 
+      - 2018:80
+    volumes:
+      - ./web:/usr/share/nginx/html
   api:
     build:
       context: ./
       dockerfile: _api.Dockerfile
     ports:
-      - 8000:80
+      - 2019:80
     volumes:
       - ./api:/var/www/html/
