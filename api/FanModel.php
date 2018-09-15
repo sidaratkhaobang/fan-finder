@@ -42,6 +42,16 @@ class FanModel
     public static function getPlace($dob)
     {
         // TODO
+        // 11/05/2540 (DD/MM/YYYY)
+        // sum = (1+1++5+2+5+4+0)%10
+        for($i =0;$i<=strlen($dob);$i++){
+            if($dob[$i] == "/"){
+                $dob[$i] = 0;
+            }
+            $sum = $dob[$i];
+        }
+        return $sum;
+
     }
 
     public static function getAction($mobileno)

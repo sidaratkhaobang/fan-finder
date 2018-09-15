@@ -18,15 +18,41 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
 
-    public function testGetNationality_NameLength4(){
+    public function testGetNationality_NameLength5(){
         $expected_result = 'เกาหลี';
         $result = FanModel::getNationality('หมวย');
         $this->assertEquals($expected_result,$result);
     }
 
-    public function testGetNationality_NameLength7(){
+    public function testGetNationality_NameLength10(){
         $expected_result = 'ไทย';
         $result = FanModel::getNationality('ดอกหมวย');
         $this->assertEquals($expected_result,$result);
+    }
+
+    public function testGetNationality_NameLength15(){
+        $expected_result = 'วากันด้า';
+        $result = FanModel::getNationality('อารีฟีน กุลดี');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testGetNationality_NameLength20(){
+        $expected_result = 'จีน';
+        $result = FanModel::getNationality('นายอารีฟีน กุลดีนะ');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testGetNationality_NameLength25(){
+        $expected_result = 'ชาติหน้า';
+        $result = FanModel::getNationality('มูฮัมหมัดกัดดาฟี อิดฆอมมูตามาซีลัย');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testGetPlace(){
+
+        $result = FanModel::getPlace('15/09/2561');
+        $expected_result = $result;
+        $this->assertEquals($expected_result,$result);
+        echo $result;
     }
 }
