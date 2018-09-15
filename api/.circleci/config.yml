@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: circleci/php:7.2-browsers
 
+
     working_directory: ~/fan-finder
     steps:
       - checkout
