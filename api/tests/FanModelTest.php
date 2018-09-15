@@ -53,4 +53,54 @@ final class FanModelTest extends TestCase
         $result = FanModel::getNationality('ทีเด็ดเฟี้ยวฟ้าวเยี่ยวราดพื้นลื่นหัวทิ่มดิน');
         $this->assertEquals($expected_result, $result);
     }
+    public function testGetdob_0(){
+        $expected_result = '0';
+        $result = FanModel :: getPlace('01/08/2540');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_1(){
+        $expected_result = '1';
+        $result = FanModel :: getPlace('01/08/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_2(){
+        $expected_result = '2';
+        $result = FanModel :: getPlace('01/08/2542');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_3(){
+        $expected_result = '3';
+        $result = FanModel :: getPlace('01/08/2543');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_4(){
+        $expected_result = '4';
+        $result = FanModel :: getPlace('01/08/2544');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_5(){
+        $expected_result = '5';
+        $result = FanModel :: getPlace('01/08/2545');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_6(){
+        $expected_result = '6';
+        $result = FanModel :: getPlace('01/08/2546');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_7(){
+        $expected_result = '7';
+        $result = FanModel :: getPlace('01/08/2547');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_8(){
+        $expected_result = '8';
+        $result = FanModel :: getPlace('01/08/2548');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetdob_9(){
+        $expected_result = '9';
+        $result = FanModel :: getPlace('01/08/2549');
+        $this->assertEquals($expected_result, $result);
+    }
 }
