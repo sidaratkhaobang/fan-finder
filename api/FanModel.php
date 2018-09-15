@@ -23,6 +23,14 @@ class FanModel
         $nationality = '';
         if ($name_length <= 5) {
             $nationality = 'เกาหลี';
+        } elseif ($name_length <= 10) {
+            $nationality = 'ไทย';
+        } elseif ($name_length <= 15) {
+            $nationality = 'วากานด้า';
+        } elseif ($name_length <= 20) {
+            $nationality = 'จีน';
+        } else {
+            $nationality = 'ชาติหน้า';
         }
         return $nationality;
     }
@@ -30,6 +38,9 @@ class FanModel
     public static function getPlace($dob)
     {
         // TODO
+        // 01/05/2540 (DD/MM/YYYY)
+        // score = (1+1+0+5+2+5+4+0)%10
+        // HINT: str_replace, str_split 
     }
 
     public static function getAction($mobileno)
