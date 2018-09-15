@@ -16,11 +16,11 @@ class FanModel
         $name_length = mb_strlen($name);
         $Nationality='';
         switch($name_length){
-            case ($name_length>=21):return'ชาติหน้า'; 
-            case ($name_length>=16):return'จีน'; 
-            case ($name_length>=11):return'วากานด้า'; 
-            case ($name_length>=6):return'ไทย'; 
-            default:return'เกาหลี'; 
+            case ($name_length>=21):$Nationality='ชาติหน้า';break;
+            case ($name_length>=16):$Nationality='จีน';break;
+            case ($name_length>=11):$Nationality='วากานด้า';break;
+            case ($name_length>=6):$Nationality='ไทย';break;
+            default:$Nationality='เกาหลี'; 
         }
         return $Nationality;
     }
