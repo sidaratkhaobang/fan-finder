@@ -20,3 +20,27 @@ jobs:
       - run: chmod +x phpunit-6.5.phar
       - run: mv phpunit-6.5.phar ./api/phpunit
       - run: cd api && ./phpunit
+
+  deploy:
+    machine:
+      enabled: true
+    steps:
+      - run:
+          name: Update code
+          command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; git pull"
+      - run:
+          name: Re-build services in docker containers
+          command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker-compose up --build -d"
+      - run: echo "docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
+      - run:
+          name: Install PHP dependencies
+          command: ssh $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
