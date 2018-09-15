@@ -51,51 +51,51 @@ final class FanModelTest extends TestCase
     }
     public function testGetPlace0(){
         $expected_result ='คูน้ำ';
-        $result =FanModel::getplace('0');
+        $result =FanModel::getplace('30/07/0000');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace1(){
         $expected_result ='โรงแรม';
-        $result =FanModel::getplace('1');
+        $result =FanModel::getplace('11/09/0000');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace2(){
         $expected_result ='โรงเรียน';
-        $result =FanModel::getplace('2');
+        $result =FanModel::getplace('11/09/0001');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace3(){
         $expected_result ='ป่า';
-        $result =FanModel::getplace('3');
+        $result =FanModel::getplace('30/05/5000');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace4(){
         $expected_result ='สวนสัตว์';
-        $result =FanModel::getplace('4');
+        $result =FanModel::getplace('04/03/2500');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace5(){
         $expected_result ='สวนสาธารณะ';
-        $result =FanModel::getplace('5');
+        $result =FanModel::getplace('05/03/2500');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace6(){
         $expected_result ='สวนสนุก';
-        $result =FanModel::getplace('6');
+        $result =FanModel::getplace('06/03/2500');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace7(){
         $expected_result ='น้ำตก';
-        $result =FanModel::getplace('7');
+        $result =FanModel::getplace('07/03/2500');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace8(){
         $expected_result ='ทะเล';
-        $result =FanModel::getplace('8');
+        $result =FanModel::getplace('08/03/2500');
         $this->assertEquals($expected_result,$result);
     }public function testGetPlace9(){
         $expected_result ='สวรรค์ชั้น7';
-        $result =FanModel::getplace('9');
+        $result =FanModel::getplace('09/03/2500');
         $this->assertEquals($expected_result,$result);
     }
 }

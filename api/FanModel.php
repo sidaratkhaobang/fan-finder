@@ -48,53 +48,29 @@ class FanModel
         $date = str_replace("/","",$dob);
         $nums = str_split($date);
         $sum = 0;
-        $place = '';
+        $place = [
+            'คูน้ำ',
+            'โรงแรม',
+            'โรงเรียน',
+            'ป่า',
+            'สวนสัตว์',
+            'สวนสาธารณะ',
+            'สวนสนุก',
+            'น้ำตก',
+            'ทะเล',
+            'สวรรค์ชั้น7'
+        ];
         foreach($nums as $value)
         {
             $sum = $sum + intval($value);
         }
         $score = $sum % 10;
-        if($sum == 0)
-        {
-            $place = 'คูน้ำ';
+
+        for($i = 0;$i<10;$i++){
+            if($score == $i){
+                return $place[$i];
+            }
         }
-        elseif($sum == 1)
-        {
-            $place = 'โรงแรม';
-        }
-        elseif($sum == 2)
-        {
-            $place = 'โรงเรียน';
-        }
-        elseif($sum == 3)
-        {
-            $place = 'ป่า';
-        }
-        elseif($sum == 4)
-        {
-            $place = 'สวนสัตว์';
-        }
-        elseif($sum == 5)
-        {
-            $place = 'สวนสาธารณะ';
-        }
-        elseif($sum == 6)
-        {
-            $place = 'สวนสนุก';
-        }
-        elseif($sum == 7)
-        {
-            $place = 'น้ำตก';
-        }
-        elseif($sum == 8)
-        {
-            $place = 'ทะเล';
-        }
-        elseif($sum == 9)
-        {
-            $place = 'สวรรค์ชั้น7';
-        }
-        return $place;
     }
 
 
