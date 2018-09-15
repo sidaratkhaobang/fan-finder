@@ -1,5 +1,4 @@
 function predict(event) {
-  document.getElementById("result").classList.add("hidden");
   const name = document.getElementById('name').value;
   const phone = document.getElementById('phone').value;
   const birthdate = document.getElementById('birthdate').value
