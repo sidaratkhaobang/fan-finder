@@ -39,5 +39,64 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
 
-   
+    public function testGetPlace0()
+    {
+        $expected_result = 'นมะม่วง';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace1()
+    {
+        $expected_result = 'สังขละบุรี ';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace2()
+    {
+        $expected_result = 'เกาะกูด';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace3()
+    {
+        $expected_result = 'โมโกจู';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace4()
+    {
+        $expected_result = 'วัดเจติยาคีรีวิหาร';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace5()
+    {
+        $expected_result = 'เขื่อนรัชชประภา';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace6()
+    {
+        $expected_result = 'ดอยหลวงเชียงดาว';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace7()
+    {
+        $expected_result = 'เขาช้างเผือก';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace8()
+    {
+        $expected_result = 'เขาช้างเผือก';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetPlace9()
+    {
+        $expected_result = 'เกาะตาชัย';
+        $result = FanModel::getPlace('03/05/2541');
+        $this->assertEquals($expected_result, $result);
+    }
 }
