@@ -49,18 +49,20 @@ class FanModel
         $str = str_replace("/", "", $dob);
         $numbers_text = str_split($str);
         $sum = 0 ;
+        $place = array("สมุย","ดงดอกไม้","พุ้มไม้","ใต้ต้นไม้","บนต้นไม้","มังกร","บลูบัพ","บ้านผม","หน้ามอ","วากานด้า");
         foreach($numbers_text as $number){
             $sum += intval($number);
         }
         $total = $sum%10;
-        if($total == 0){
-            $place = "สมุย";
-        }
+        // if($total == 0){
+        //     $place = "สมุย";
+        // }
         // elseif($total == 1){
-        
+        //     $place = "ดงดอกไม้";
         // }
         
-        return $place;
+        // return $place;
+        return $place[$total];
     }
 
     public static function getAction($mobileno)
