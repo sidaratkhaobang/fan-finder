@@ -54,52 +54,52 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_0(){
-        $expected_result = '0';
-        $result = FanModel :: getPlace('01/08/2540');
+        $expected_result = 'วัด';
+        $result = FanModel::getPlace('01/08/2540');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_1(){
-        $expected_result = '1';
+        $expected_result = 'ร้านขายของเก่า';
         $result = FanModel :: getPlace('01/08/2541');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_2(){
-        $expected_result = '2';
+        $expected_result = 'หน้าบ้านอาจารย์อุ...';
         $result = FanModel :: getPlace('01/08/2542');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_3(){
-        $expected_result = '3';
+        $expected_result = 'ร้านขายยา';
         $result = FanModel :: getPlace('01/08/2543');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_4(){
-        $expected_result = '4';
+        $expected_result = 'ที่โบสถ์เรื่องเดอะก๊ะ';
         $result = FanModel :: getPlace('01/08/2544');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_5(){
-        $expected_result = '5';
+        $expected_result = 'ในหม้อง';
         $result = FanModel :: getPlace('01/08/2545');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_6(){
-        $expected_result = '6';
+        $expected_result = 'เล้าหมู';
         $result = FanModel :: getPlace('01/08/2546');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_7(){
-        $expected_result = '7';
+        $expected_result = 'ในใจ';
         $result = FanModel :: getPlace('01/08/2547');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_8(){
-        $expected_result = '8';
+        $expected_result = 'ในฝัน';
         $result = FanModel :: getPlace('01/08/2548');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_9(){
-        $expected_result = '9';
+        $expected_result = 'ในสวนยาง';
         $result = FanModel :: getPlace('01/08/2549');
         $this->assertEquals($expected_result, $result);
     }

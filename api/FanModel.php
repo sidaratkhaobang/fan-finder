@@ -46,12 +46,28 @@ class FanModel
     public static function getPlace($dob)
     {
         $sum=0;
-        $getdob = str_replace('/','0',$dob);
+        $getdob = str_replace('/','',$dob);
         $numberdob = str_split($getdob);
+        $place = " ";
         foreach ($numberdob as $value) {
-            $sum += $value;
+            $sum += intval($value) ;
         }   
-        return $sum%10; 
+        $sum=$sum%10; 
+        switch($sum){
+            case 0:  $place = "วัด"; break;
+            case 1:  $place = 'ร้านขายของเก่า';break;
+            case 2:  $place = 'หน้าบ้านอาจารย์อุ...';break;
+            case 3:  $place = 'ร้านขายยา';break;
+            case 4:  $place = 'ที่โบสถ์เรื่องเดอะก๊ะ';break;
+            case 5:  $place = 'ในหม้อง';break;
+            case 6:  $place = 'เล้าหมู';break;
+            case 7:  $place = 'ในใจ';break;
+            case 8:  $place = 'ในฝัน';break;
+            case 9:  $place = 'ในสวนยาง';break;
+            // default:
+        };
+        return $place;
+    // return "วัด";
     }
         //11/05/2540(DD/MM/YY)
         // sum = (1+1+0+5+2+5+4+0)%10
