@@ -44,14 +44,44 @@ class FanModel
         // TODO
         // 11/05/2540 (DD/MM/YYYY)
         // score = (1+1+0+5+2+5+4+0)%10
-        // $newdob[] = str_replace($dob);
-        // $sum = 0;
-        // for($i=0;$i<=8;$i++){
-        //     $sum=$sum+$newdob[$i];
-        // }
-        // $nationaliy=$sum%10
-        // return  $nationaliy;
-        // return $nationaliy;
+        $newdob = str_replace("/","",$dob);
+        $num = str_split($newdob);
+        $sum = 0;
+        foreach($num as $value ){
+            $sum = $sum+ intval($value);
+        }
+        $score = $sum % 10;
+        if($score == 0) {
+            $getPlace = 'สวนมะม่วง';
+        }
+        else if($score == 1){
+            $getPlace = 'สังขละบุรี';
+        }
+        else if($score == 2){
+            $getPlace = 'เกาะกูด';
+        }
+        else if($score == 3){
+            $getPlace = 'โมโกจู';
+        }
+        else if($score == 4){
+            $getPlace = 'วัดเจติยาคีรีวิหาร';
+        }
+        else if($score == 5){
+            $getPlace = 'เขื่อนรัชชประภา';
+        }
+        else if($score == 6){
+            $getPlace = 'ดอยหลวงเชียงดาว';
+        }
+        else if($score == 7){
+            $getPlace = 'เขาช้างเผือก';
+        }
+        else if($score == 8){
+            $getPlace = 'เขาช้างเผือก2';
+        }
+        else{
+            $getPlace = 'เกาะตาชัย';
+        }
+        return $getPlace;
     }
 
     public static function getAction($mobileno)
