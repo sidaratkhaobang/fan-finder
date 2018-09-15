@@ -1,12 +1,20 @@
 version: 2
-
 jobs:
-  build-job:
+  build:
     docker:
-      - image: circleci/php:7.2-apache-node-browsers-legacy
-    working_directory: ~/wu2018
+      - image: circleci/php:7.2-browsers
+
+    working_directory: ~/fan-finder
+
     steps:
       - checkout
-      - run: curl -sS https://getcomposer.org/installer | php -- --filename=composer
-      - run: ./composer install
-      - run: ./vendor/bin/phpunit
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "composer.json" }}
+          - v1-dependencies-
+      - run: composer install -n --prefer-dist
+      - save_cache:
+          paths:
+            - ./vendor
+          key: v1-dependencies-{{ checksum "composer.json" }}
+      - run: phpunit
