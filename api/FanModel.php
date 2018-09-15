@@ -27,7 +27,29 @@ class FanModel
 
     public static function getPlace($dob)
     {
-        // TODO
+        $place='';
+        $sum=0;
+        $rpDob = str_replace('/' ,'', $dob);
+        $spDob = str_split($rpDob);
+        //ใช้arraysum
+        for($i=0 ; $i<count($spDob) ; $i++){
+            $rpDob = (int)($spDob[$i]);
+            $sum = $sum+$rpDob;
+        }
+        $score= $sum%10;
+        switch($score){
+            case 0: $place='โซล';break;
+            case 1: $place='นครศรีธรรมราช';break;
+            case 2: $place='กรุงเทพ';break;
+            case 3: $place='ตลาด';break;
+            case 4: $place='แม่น้ำอเมซอน';break;
+            case 5: $place='คอนเสิร์ตซอนโฮ';break;
+            case 6: $place='สยามพารากอน';break;
+            case 7: $place='ดอยผาหมี';break;
+            case 8: $place='น้ำตกไซเบอ';break;
+            case 9: $place='เขาสะแกกรัง';break;
+        }
+        return $place;
     }
 
     public static function getAction($mobileno)

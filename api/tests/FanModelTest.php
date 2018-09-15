@@ -44,5 +44,65 @@ final class FanModelTest extends TestCase
         $result = Fanmodel::getNationality('นางสาวณกรตาเปียทองอิอิ');
         $this->assertEquals($expected_result,$result);
     }
+
+    public function testgetPlace_dob0(){
+        $expected_result = 'โซล';
+        $result = Fanmodel::getPlace('01/01/2015');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob1(){
+        $expected_result = 'นครศรีธรรมราช';
+        $result = Fanmodel::getPlace('01/01/2016');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob2(){
+        $expected_result = 'กรุงเทพ';
+        $result = Fanmodel::getPlace('01/01/2017');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob3(){
+        $expected_result = 'ตลาด';
+        $result = Fanmodel::getPlace('01/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob4(){
+        $expected_result = 'แม่น้ำอเมซอน';
+        $result = Fanmodel::getPlace('02/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob5(){
+        $expected_result = 'คอนเสิร์ตซอนโฮ';
+        $result = Fanmodel::getPlace('03/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob6(){
+        $expected_result = 'สยามพารากอน';
+        $result = Fanmodel::getPlace('04/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob7(){
+        $expected_result = 'ดอยผาหมี';
+        $result = Fanmodel::getPlace('05/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob8(){
+        $expected_result = 'น้ำตกไซเบอ';
+        $result = Fanmodel::getPlace('06/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetPlace_dob9(){
+        $expected_result = 'เขาสะแกกรัง';
+        $result = Fanmodel::getPlace('07/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
     
 }
