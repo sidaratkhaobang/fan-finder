@@ -41,8 +41,27 @@ class FanModel
 
     }
     public static function getPlace($dob)
+
     {
         // TODO
+        // 11/05/2540 (DD/MM/YYYY)
+        // score = (1+1+0+5+2+5+4+0)%10
+        // HINT: str_replace, str_split
+        $str = str_replace("/", "", $dob);
+        $numbers_text = str_split($str);
+        $sum = 0 ;
+        foreach($numbers_text as $number){
+            $sum += intval($number);
+        }
+        $total = $sum%10;
+        if($total == 0){
+            $place = "แม่น้ำ";
+        }
+        // elseif($total == 1){
+        
+        // }
+        
+        return $place;
     }
 
     public static function getAction($mobileno)
