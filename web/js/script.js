@@ -4,7 +4,10 @@ function predict(event) {
   const birthdate = document.getElementById('birthdate').value
 
   const Http = new XMLHttpRequest();
-  const url = `http://localhost:2019/fan/predict?name=${name}&mobileno=${phone}&dob=${birthdate}`;
+  const current_url = new URL(window.location.href);
+  const api_port = parseInt(current_url.port) + 1;
+  const host = `http://${current_url.hostname}:${api_port}`;
+  const url = `${host}/fan/predict?name=${name}&mobileno=${phone}&dob=${birthdate}`;
   Http.open("GET", url, true);
   Http.send();
 

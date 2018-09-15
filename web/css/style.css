@@ -35,14 +35,15 @@ body {
   width: 300px;
 }
 
-#form button {
+#predict {
   margin-top: 1em;  
   font-size: 15px;
   background: #cc1100;
   color: #fefefe;
   padding: .75em .75em;
   border-radius: 0.5em;
-  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .hidden {
