@@ -65,12 +65,7 @@ class FanModel
             $sum = $sum + intval($value);
         }
         $score = $sum % 10;
-
-        for($i = 0;$i<10;$i++){
-            if($score == $i){
-                return $place[$i];
-            }
-        }
+        return $place[$score];
     }
 
 
