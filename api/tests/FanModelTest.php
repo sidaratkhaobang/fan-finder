@@ -28,4 +28,11 @@ final class FanModelTest extends TestCase
         $result = FanModel::getNationality('ดอกหมวย');
         $this->assertEquals($expected_result, $result);
     }
+
+    public function testGetPlace_DateOne()
+    {
+        $expected_result = 'สวนผึ้ง';
+        $result = FanModel::getPlace('01/01/2001');
+        $this->assertEquals($expected_result, $result);
+    }
 }
