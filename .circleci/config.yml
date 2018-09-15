@@ -23,9 +23,7 @@ jobs:
       - run: cd api && ./phpunit
 
   deployment:
-    master:
-      branch: master
-      steps:
-        - run: echo 'deploying'
-        - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker-compose up --build -d"
-        - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
+    steps:
+      - run: echo 'deploying'
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker-compose up --build -d"
+      - run: ssh -v $DROPLET_USER@$DROPLET_IP "cd /root/fan-finder_$CIRCLE_BRANCH; docker exec fanfinder$CIRCLE_BRANCH_api_1 composer install"
