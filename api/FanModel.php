@@ -5,9 +5,9 @@ class FanModel
     public static function predict($name, $dob, $mobileno)
     {
         return [
-            "nationality" => FanModel :: getNationality($name),
-            "place" => FanModel :: getPlace($dob),
-            'action' =>  FanModel :: getAction($mobileno)
+            "nationality" => FanModel:: getNationality($name),
+            "place" => FanModel:: getPlace($dob),
+            'action' =>  FanModel:: getAction($mobileno)
         ];
     }
 
@@ -73,7 +73,7 @@ class FanModel
         $number_array = str_split($number_without_slash);
         $score = array_sum($number_array)%10;
         $places = [
-             'ยิงตัวตาย',
+            'ยิงตัวตาย',
             'ทอดไก่ด้วยน้ำมันหมู',
             'ทอดหมูด้วยน้ำมันรถ',
             'ยำเนื้อ',
