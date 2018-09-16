@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 final class FanModelTest extends TestCase
 {
-    public function testPredict(): void
+    public function testPredict()
     {
         $expected_result = [
             "nationality" => 'เกาหลี',
