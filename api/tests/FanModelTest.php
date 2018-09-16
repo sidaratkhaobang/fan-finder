@@ -35,7 +35,7 @@ final class FanModelTest extends TestCase
 
     public function testGetNationality_NameLength7()
     {
-        $expected_result = 'ไท';
+        $expected_result = 'ไทย';
         $result = FanModel::getNationality('หมวยดอก');
         $this->assertEquals($expected_result, $result);
     }
