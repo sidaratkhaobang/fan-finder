@@ -9,11 +9,11 @@ final class FanModelTest extends TestCase
         $name='หมวย';
         $dob='05/01/2018';
         $mobileno='0825000000';
-        $expected_result = [
-            "nationality" => 'เกาหลี',
-            "place" => 'ดอยผาหมี',
-            'action' => 'ตั้งใจเรียนวิชาเทสติ้ง' 
-        ];
+        $expected_result = $data = array(
+            'nationality' => 'เกาหลี',
+            'place' => 'ดอยผาหมี',
+            'action' => 'ตั้งใจเรียนวิชาเทสติ้ง'
+        );
         $result = FanModel::predict($name, $dob, $mobileno);
         $this->assertEquals($expected_result, $result);
     }
