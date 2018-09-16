@@ -15,7 +15,7 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
 
-    
+    // nameLeanght
     public function testGetnationality_nameLeanght4(): void
     {
         $expected_result = 'เกาหลี';
@@ -46,7 +46,7 @@ final class FanModelTest extends TestCase
         $result = FanModel::getNationality('ดอกหมวยน่ารักสุดดดดดดดด');
         $this->assertEquals($expected_result, $result);
     }
-
+    // place
     public function testPlace_sumdate0()
     {
         $expected_result = 'aaa';
@@ -107,7 +107,68 @@ final class FanModelTest extends TestCase
         $result = FanModel::getPlace('29/11/2004');
         $this->assertEquals($expected_result, $result);
     }
-    
+    // mobileno0
+    public function testgetAction_mobileno0()
+    {
+        $expected_result = 'กำลังขี่ช้างเอราวัณ';
+        $result = FanModel::getAction('0000000000');
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetAction_mobileno1()
+    {
+        $expected_result = 'กำลังพลอดรักกับแฟนเก่า';
+        $result = FanModel::getAction('0000000001');
+        $this->assertEquals($expected_result, $result);
+    }
+    // public function testgetAction_mobileno2()
+    // {
+    //     $expected_result = 'กำลังหางูกิน';
+    //     $result = FanModel::getAction('1234567892');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno3()
+    // {
+    //     $expected_result = 'กำลังยืนฉี่ในห้องน้ำชาย';
+    //     $result = FanModel::getAction('1234567893');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno4()
+    // {
+    //     $expected_result = 'กำลังจะกระโดดสะพาน';
+    //     $result = FanModel::getAction('1234567894');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno5()
+    // {
+    //     $expected_result = 'กำลังบิน';
+    //     $result = FanModel::getAction('1234567895');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno6()
+    // {
+    //     $expected_result = 'กำลังเรียนหนังสือ';
+    //     $result = FanModel::getAction('1234567896');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno7()
+    // {
+    //     $expected_result = 'กำลังกินข้าวกับแฟนเก่า';
+    //     $result = FanModel::getAction('1234567897');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno8()
+    // {
+    //     $expected_result = 'กำลังลากไก่ไปกินในน้ำ';
+    //     $result = FanModel::getAction('1234567898');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+    // public function testgetAction_mobileno9()
+    // {
+    //     $expected_result = 'กำลังทอดหมูในโรงพยาบาลจิตเวศ';
+    //     $result = FanModel::getAction('1234567899');
+    //     $this->assertEquals($expected_result, $result);
+    // }
+
 
     
 
