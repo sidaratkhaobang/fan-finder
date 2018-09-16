@@ -99,6 +99,12 @@ final class FanModelTest extends TestCase
         $result = FanModel::getPlace('18/00/0000');
         $this->assertEquals($expected_result, $result);
     }
+    public function testGetPlace10()
+    {
+        $expected_result = 'คลอง';
+        $result = FanModel::getPlace('18/00/0000');
+        $this->assertEquals($expected_result, $result);
+    }
 
 
 
