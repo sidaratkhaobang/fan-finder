@@ -64,13 +64,13 @@ final class FanModelTest extends TestCase
     }
 
     public function testGetPlace_Dob3(){
-        $expected_result = 'แซนดร้า';
+        $expected_result = 'มหาวิทยาลัยวลัยลักษณ์';
         $result = FanModel::getPlace('04/06/2001');
         $this->assertEquals($expected_result, $result);
     }
 
     public function testGetPlace_Dob4(){
-        $expected_result = 'มหาวิทยาลัยวลัยลักษณ์';
+        $expected_result = 'แอสการ์ด';
         $result = FanModel::getPlace('05/06/2001');
         $this->assertEquals($expected_result, $result);
     }
