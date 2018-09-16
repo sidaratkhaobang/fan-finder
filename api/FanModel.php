@@ -45,12 +45,23 @@ class FanModel
         // TODO
         // 11/05/2540 (DD//MM/YYYY)
         // sum = (1+1+0+5+2+5+4+0)%10
-        // HINT : str_replace,str_split
-        // 1
-        // 2
-        // 3
-        // 4
-        // 5
+        $number_without_slash = str_replace('/','',$dob);
+        $number_array = str_split($number_without_slash);
+        $score = array_sum($number_array)%10;
+        $places = [
+            'ถ้ำหลวง',
+            'ดาวอังคาร',
+            'ในป่า',
+            'ทำเนียบรัฐบาล',
+            'เรือนจำกลาง',
+            'เอเวอร์เรส',
+            'ใต้มหาสมุทรแปซิฟิก',
+            'วลัยลักษณ์',
+            '3เวย์',
+            'ลานชา',
+        ];
+        return $places[$score];
+        
         
 
     }
@@ -58,5 +69,22 @@ class FanModel
     public static function getAction($mobileno)
     {
         // TODO
+        $number_without_slash = str_replace('-','',$mobileno);
+        $number_array = str_split($number_without_slash);
+        $score = array_sum($number_array)%10;
+        $places = [
+             'ยิงตัวตาย',
+            'ทอดไก่ด้วยน้ำมันหมู',
+            'ทอดหมูด้วยน้ำมันรถ',
+            'ยำเนื้อ',
+            'ตรวจโรคเอดส์',
+            'ฉลามเเดกก',
+            'กระทืบยามหน้าหอ',
+            'หนีตำรวจ',
+            'คุยกับคนบ้า',
+            'ไถ่ตังคนเเก่เเตะคนท้อง',
+        ];
+        return $places[$score];
+
     }
 }
