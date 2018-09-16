@@ -50,7 +50,7 @@ class FanModel
         $nums = str_split($date);
         $sum = 0;
         $place = [
-            'คูน้ำ',
+            'คู',
             'โรงแรม',
             'โรงเรียน',
             'ป่า',
