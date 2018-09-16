@@ -2,19 +2,6 @@
 
 class FanModel
 {
-    public static function predict($name, $dob, $mobileno)
-    {
-        // $nationality = getNationality($name);
-        // $place = getPlace($dob);
-        // $action = getAction($mobileno);
-        
-        $data = array(
-            'nationality' => getNationality($name),
-            'place' => getPlace($dob),
-            'action' => getAction($mobileno)
-        );
-        return $data;
-    }
 
     public static function getNationality($name)
     {
@@ -75,5 +62,19 @@ class FanModel
             'นอนหิว',
         ];
         return $action[$score];
+    }
+
+    public static function predict($name, $dob, $mobileno)
+    {
+        $nationality = getNationality($name);
+        $place = getPlace($dob);
+        $action = getAction($mobileno);
+
+        $data = array(
+            'nationality' => $nationality,
+            'place' => $place,
+            'action' => $action
+        );
+        return $data;
     }
 }
