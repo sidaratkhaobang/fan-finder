@@ -34,7 +34,7 @@ class FanModel
             $nationality = 'จีน';
         }
         else {
-            $nationality = 'ชาติหน้า';
+            $nationality = 'อเวจีนรก';
         }
         return $nationality;
     }
