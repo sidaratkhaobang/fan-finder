@@ -87,10 +87,9 @@ class FanModel
     {
         // TODO
         $sum=0;
-        $num_phone = str_replace('-','',$mobileno);
-        $num_telephone = str_split($num_phone);
+        $num_phone = str_split($mobileno);
         $action = '';
-        foreach($num_telephone as $value){
+        foreach($num_phone as $value){
        
             $sum += intval($value);
         }
