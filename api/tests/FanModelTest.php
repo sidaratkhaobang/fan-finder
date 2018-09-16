@@ -28,7 +28,7 @@ final class FanModelTest extends TestCase
     }
 
     public function testGetNationality_NameLength11(){
-        $expected_result = 'บ้านลุงตู่';
+        $expected_result = 'วากานด้า';
         $result = FanModel::getNationality('ดอกหมวยอิอิ');
         $this->assertEquals($expected_result, $result);
     }
@@ -46,7 +46,7 @@ final class FanModelTest extends TestCase
     }
 
     public function testGetPlace_Dob0(){
-        $expected_result = 'วากานด้า';
+        $expected_result = 'บ้านลุงตู่';
         $result = FanModel::getPlace('01/06/2001');
         $this->assertEquals($expected_result, $result);
     }
@@ -76,7 +76,7 @@ final class FanModelTest extends TestCase
     }
 
     public function testGetPlace_Dob5(){
-        $expected_result = 'บรูคลิน';
+        $expected_result = 'เรือนจำบางขวาง';
         $result = FanModel::getPlace('10/03/2540');
         $this->assertEquals($expected_result, $result);
     }

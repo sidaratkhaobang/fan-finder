@@ -31,7 +31,7 @@ class FanModel
         }else if($name_length <= 10 ){
             $nationality = 'ไทย';
         }else if($name_length <= 15 ){
-            $nationality = 'บ้านลุงตู่';
+            $nationality = 'วากานด้า';
         }else if($name_length <= 20 ){
             $nationality = 'จีน';
         }else{
@@ -60,7 +60,7 @@ class FanModel
         }else if($score == 6  ){
             $place = 'โซล';
         }else if($score == 5 ){
-            $place = 'บรูคลิน';
+            $place = 'เรือนจำบางขวาง';
         }else if($score == 4 ){
             $place = 'แอสการ์ด';
         }else if($score == 3  ){
@@ -70,7 +70,7 @@ class FanModel
         }else if($score == 1 ){
             $place = 'รัฐเวอร์เรีย';
         }else{
-            $place = 'วากานด้า';
+            $place = 'บ้านลุงตู่';
         }  
         return $place;
     }
