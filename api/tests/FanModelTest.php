@@ -6,10 +6,13 @@ final class FanModelTest extends TestCase
 {
     public function testPredict()
     {
+        $name='หมวย';
+        $dob='05/01/2018';
+        $mobileno='0825000000';
         $expected_result = [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่' 
+            "nationality" => 'เกาหลี',
+            "place" => 'ดอยผาหมี',
+            'action' => 'ตั้งใจเรียนวิชาเทสติ้ง' 
         ];
         $result = FanModel::predict($name, $dob, $mobileno);
         $this->assertEquals($expected_result, $result);
