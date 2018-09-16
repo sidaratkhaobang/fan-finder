@@ -29,11 +29,11 @@ class FanModel
         if($name_length <= 5  ){
             $nationality = 'เกาหลี';
         }else if($name_length <= 10 ){
-            $nationality = 'ไทย';
+            $nationality = 'จีน';
         }else if($name_length <= 15 ){
             $nationality = 'วากานด้า';
         }else if($name_length <= 20 ){
-            $nationality = 'จีน';
+            $nationality = 'ไทย';
         }else{
             $nationality = 'ชาติหน้า';
         }  
@@ -62,7 +62,7 @@ class FanModel
         }else if($score == 5 ){
             $place = 'เรือนจำบางขวาง';
         }else if($score == 4 ){
-            $place = 'แอสการ์ด';
+            $place = 'มหาวิทยาลัยวลัยลักษณ์';
         }else if($score == 3  ){
             $place = 'แซนดร้า';
         }else if($score == 2 ){
