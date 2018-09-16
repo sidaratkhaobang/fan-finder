@@ -4,10 +4,11 @@ class FanModel
 {
     public static function predict($name, $dob, $mobileno)
     {
+       
         return [
-            "nationality" => 'Eng',
-            "place" => 'abc',
-            'action' => 'pingkai',
+            "nationality" => FanModel::getNationality($name),
+            "place" => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno),
         ];
     }
 
@@ -56,13 +57,13 @@ class FanModel
         $mod = $sum % 10;
         //$place = ['aaa','bbb','ccc','อาคารรวม5','อาคารรวม7','อาคารรวม1','ไทยบุรี','ศุนย์คอม','7-11','family mart']
         if ($mod == 0) {
-            $place = 'aaa';
+            $place = 'ทางช้างเผือก';
         }
         else if ($mod == 1) {
-            $place = 'bbb';
+            $place = 'ดาวเสาร์';
         }
         else if ($mod == 2) {
-            $place = 'ccc';
+            $place = 'ป่าดงดิบ';
         }
         else if ($mod == 3) {
             $place = 'อาคารรวม5';

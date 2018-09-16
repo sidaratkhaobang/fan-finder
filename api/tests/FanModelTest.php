@@ -7,11 +7,11 @@ final class FanModelTest extends TestCase
     public function testPredict(): void
     {
         $expected_result = [
-            "nationality" => 'Eng',
-            "place" => 'abc',
-            'action' => 'pingkai' 
+            "nationality" => 'เกาหลี',
+            "place" => 'ทางช้างเผือก',
+            'action' => 'กำลังพลอดรักกับแฟนเก่า' 
         ];
-        $result = FanModel::predict($name, $dob, $mobileno);
+        $result = FanModel::predict('sky', '11/11/2004', '0937131681');
         $this->assertEquals($expected_result, $result);
     }
 
@@ -49,19 +49,19 @@ final class FanModelTest extends TestCase
     // place
     public function testPlace_sumdate0()
     {
-        $expected_result = 'aaa';
+        $expected_result = 'ทางช้างเผือก';
         $result = FanModel::getPlace('11/11/2004');
         $this->assertEquals($expected_result, $result);
     }
     public function testPlace_sumdate1()
     {
-        $expected_result = 'bbb';
+        $expected_result = 'ดาวเสาร์';
         $result = FanModel::getPlace('12/11/2004');
         $this->assertEquals($expected_result, $result);
     }
     public function testPlace_sumdate2()
     {
-        $expected_result = 'ccc';
+        $expected_result = 'ป่าดงดิบ';
         $result = FanModel::getPlace('13/11/2004');
         $this->assertEquals($expected_result, $result);
     }
