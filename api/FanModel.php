@@ -40,9 +40,7 @@ class FanModel
         $sum = str_replace('/', '',$dob);
         $score = str_split($sum);
         $sumnumber = array_sum($score);
-        // foreach ($score as $value) {
-        //     $value = $value + $value ;
-        // }
+        
         if ($sumnumber == 0){
             $char = "สระว่ายน้ำ";
         }elseif ($sumnumber == 1) {
