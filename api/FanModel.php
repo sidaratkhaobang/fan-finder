@@ -69,8 +69,8 @@ class FanModel
     {
         // TODO
         $action = str_split($mobileno);
-        $sumnumber = array_sum($action);
-        $sumphone = ($sumnumber %10) + 1 ;
+        $sumnum = array_sum($action);
+        $sumphone = ($sumnum %10) + 1 ;
 
         if ($sumphone == 1){
             $act = "กำนั่งรถกลับหอ";
