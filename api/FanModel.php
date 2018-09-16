@@ -4,10 +4,6 @@ class FanModel
 {
     public static function predict($name, $dob, $mobileno)
     {
-        // $nationality = getNationality($name);
-        // $place = getPlace($dob);
-        // $action = getAction($mobileno);
-
         $data = array(
             'nationality' => self::getNationality($name),
             'place' => self::getPlace($dob),
@@ -33,16 +29,9 @@ class FanModel
     public static function getPlace($dob)
     {
         $place='';
-        //$sum=0;
         $rpDob = str_replace('/' ,'', $dob);
         $spDob = str_split($rpDob);
-        
         $score = array_sum($spDob)%10;
-        // for($i=0 ; $i<count($spDob) ; $i++){
-        //     $rpDob = (int)($spDob[$i]);
-        //     $sum = $sum+$rpDob;
-        // }
-        // $score= $sum%10;
         switch($score){
             case 0: $place='โซล';break;
             case 1: $place='นครศรีธรรมราช';break;
