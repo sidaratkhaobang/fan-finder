@@ -4,8 +4,9 @@ use PHPUnit\Framework\TestCase;
 
 final class FanModelTest extends TestCase
 {
-    public function testPrdict() 
+    public function testPredict(): void
     {
+
         $expected_result = [
             "nationality" => Fanmodel::getNationality($name),
             "place" => Fanmodel::getPlace($dob),
