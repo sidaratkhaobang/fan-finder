@@ -87,7 +87,8 @@ class FanModel
     public static function getAction($mobileno)
     {
         $sum=0;
-        $number = str_split($mobileno);
+        $getmobileno = str_replace('-','',$mobileno);
+        $number = str_split($getmobileno);
         $action="";
         foreach ($number as $value) {
             $sum += intval($value) ;
