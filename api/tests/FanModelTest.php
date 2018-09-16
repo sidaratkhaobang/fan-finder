@@ -6,15 +6,15 @@ final class FanModelTest extends TestCase
 {
     public function testPredict(): void
     {
-        $name = "สมหญิง ศรีสุข";
-        $dob = "15 Sept 2018";
-        $mobileno = "0987654321";
+        // $name = "สมหญิง ศรีสุข";
+        // $dob = "15 Sept 2018";
+        // $mobileno = "0987654321";
         $expected_result = [
-            "nationality" => 'German',
-            "place" => 'โพชิงกิ',
-            'action' => 'โดนยิง' 
+            "nationality" => 'วากันด้า',
+            "place" => 'ทองผาภูมิ',
+            'action' => 'หาหอย' 
         ];
-        $result = FanModel::predict($name, $dob, $mobileno);
+        $result = FanModel::predict("สมหญิง ศรีสุข","15/09/2018","09-8765-4321");
         $this->assertEquals($expected_result, $result);
     }
 

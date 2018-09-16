@@ -5,9 +5,9 @@ class FanModel
     public static function predict($name, $dob, $mobileno)
     {
         return [
-            "nationality" => 'German',
-            "place" => 'โพชิงกิ',
-            'action' => 'โดนยิง',
+            "nationality" => FanModel::getNationality($name),
+            "place" => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno)
         ];
     }
 
@@ -78,7 +78,7 @@ class FanModel
             'หาหอย',
             'ดูหนัง',
             'วิ่งเล่น',
-            'สว่าย้ำ',
+            'ว่ายน้ำ',
             'ดำน้ำ',
         ];
         return $action[$sumnumber];
