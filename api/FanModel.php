@@ -105,4 +105,5 @@ class FanModel
             default:
                 $actions = 'จูนรถ';
         }
+    }
 }
