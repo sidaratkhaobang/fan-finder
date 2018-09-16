@@ -31,7 +31,7 @@ class FanModel
         }else if($name_length <= 10 ){
             $nationality = 'ไทย';
         }else if($name_length <= 15 ){
-            $nationality = 'วากานด้า';
+            $nationality = 'บ้านลุงตู่';
         }else if($name_length <= 20 ){
             $nationality = 'จีน';
         }else{
