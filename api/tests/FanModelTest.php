@@ -7,11 +7,11 @@ final class FanModelTest extends TestCase
     public function testPredict(): void
     {
         $expected_result = [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่' 
+            "nationality" => 'เกาหลี',
+            "place" => 'สมุย',
+            'action' => 'ต้มท่อม' 
         ];
-        $result = FanModel::predict($name, $dob, $mobileno);
+        $result = FanModel::predict('หมวย', '01/09/1540','0123411100');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetNationality_NameLength4()
@@ -100,5 +100,54 @@ final class FanModelTest extends TestCase
     //     $result = FanModel::getPlace("01/09/2540");
     //     $this->assertEquals($expected_result, $result);
     // }
-    
+    public function testGetAction_datesumcase0(){
+        $expected_result = 'ปิ่งไก่';
+        $result = FanModel::getAction("0123400000");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase1(){
+        $expected_result = 'ย่างกบ';
+        $result = FanModel::getAction("0123410000");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase2(){
+        $expected_result = 'กินเหล้า';
+        $result = FanModel::getAction("0123411000");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase3(){
+        $expected_result = 'ต้มท่อม';
+        $result = FanModel::getAction("0123411100");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase4(){
+        $expected_result = 'ดูดหม้อ';
+        $result = FanModel::getAction("0123411110");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase5(){
+        $expected_result = 'ดมกาว';
+        $result = FanModel::getAction("0123411111");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase6(){
+        $expected_result = 'ทอดเนื้อ';
+        $result = FanModel::getAction("0123411112");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase7(){
+        $expected_result = 'ปลูกผัก';
+        $result = FanModel::getAction("0123411122");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase8(){
+        $expected_result = 'รดน้ำ';
+        $result = FanModel::getAction("0123411222");
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testGetAction_datesumcase9(){
+        $expected_result = 'ออกกำลังกาย';
+        $result = FanModel::getAction("0123412222");
+        $this->assertEquals($expected_result, $result);
+    }
 }

@@ -5,9 +5,9 @@ class FanModel
     public static function predict($name, $dob, $mobileno)
     {
         return [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่',
+            "nationality" => FanModel::getNationality($name),
+            "place" => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno), 
         ];
     }
 
@@ -68,5 +68,10 @@ class FanModel
     public static function getAction($mobileno)
     {
         // TODO
+        $numbers_text = str_split($mobileno);
+        $score = array_sum($numbers_text)%10;
+        $action = array("ปิ่งไก่","ย่างกบ","กินเหล้า","ต้มท่อม","ดูดหม้อ","ดมกาว","ทอดเนื้อ","ปลูกผัก","รดน้ำ","ออกกำลังกาย");
+        return $action[$score];
     }
+    
 }
