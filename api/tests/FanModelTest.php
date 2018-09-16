@@ -89,4 +89,29 @@ final class FanModelTest extends TestCase
         $result = FanModel::$getPlace(01/01/2024);
         $this->assertEquals($expected_result, $result);
     }
+    public function testgetActionFishing(){
+        $expected_result='Fishing';
+        $result = FanModel::$getAction(0851111111)
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetActionHorse(){
+        $expected_result='Ride horse';
+        $result = FanModel::$getAction(0851111112)
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetActionGiraff(){
+        $expected_result='Kill Giraff';
+        $result = FanModel::$getAction(0851111113)
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetActionDragon(){
+        $expected_result='Fight Dragon';
+        $result = FanModel::$getAction(0851111114)
+        $this->assertEquals($expected_result, $result);
+    }
+    public function testgetActionBoat(){
+        $expected_result='Drive Boat';
+        $result = FanModel::$getAction(0851111115)
+        $this->assertEquals($expected_result, $result);
+    }
 }

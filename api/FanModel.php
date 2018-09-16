@@ -68,6 +68,25 @@ class FanModel
 
     public static function getAction($mobileno)
     {
-        // TODO
+            // TODO
+            $newmobile = str_replace("/","",$mobileno);
+            $num = str_split($newmobile);
+            $sum = 0;
+            foreach($num as $value ){
+                $sum = $sum+ intval($value);
+            }
+            switch ($sum%10){
+                case 0: $getAction = 'Fishing'; break;
+                case 1: $getAction = 'Ride horse' ; break;
+                case 2: $getAction = 'Kill Giraff'; break;
+                case 3: $getAction = 'Fight Dargon'; break;
+                case 4: $getAction = 'Drive Boat'; break;
+                case 5: $getAction = 'Dance BNK song' ; break;
+                case 6: $getAction = 'Swimming';  break;
+                case 7: $getAction = 'Extrect Files' ;break;
+                case 8: $getAction = 'Sleep'; break;
+                case 9: $getAction= 'Drive car'; break;  
+            }
+            return $getAction;
     }
 }
