@@ -83,27 +83,27 @@ class FanModel
         $spMobileno = str_split($mobileno);
         $point = array_sum($spMobileno)%10;
 
-        switch ($point) {
-            case 1 : $actions = 'นึ่งซาลาเปา';
-                break;
-            // case 2 : $actions = 'มองนม';
-            //     break;
-            // case 3 : $actions = 'จาม';
-            //     break;
-            // case 4 : $actions = 'ขี้';
-            //     break;
-            // case 5 : $actions = 'ชักว่าว';
-            //     break;
-            // case 6 : $actions = 'เล่นเกม';
-            //     break;
-            // case 7 : $actions = 'ดูหนัง';
-            //     break;
-            // case 8 : $actions = 'ดูคอนเสิร์ด';
-            //     break;
-            // case 9 : $actions = 'กินข้าว';
-            //     break;
-            // default:
-            //     $actions = 'จูนรถ';
-        }
+        if($point == 9  ){
+            $actions = 'กินข้าว';
+        }else if($point == 8 ){
+            $actions = 'ดูคอนเสิร์ด';
+        }else if($point == 7 ){
+            $actions = 'ดูหนัง';
+        }else if($point == 6  ){
+            $actions = 'เล่นเกม';
+        }else if($point == 5 ){
+            $actions = 'ชักว่าว';
+        }else if($point == 4 ){
+            $actions = 'ขี้';
+        }else if($point == 3  ){
+            $actions = 'จาม';
+        }else if($point == 2 ){
+            $actions = 'มองนม';
+        }else if($point == 1 ){
+            $actions = 'นึ่งซาลาเปา';
+        }else{
+            $actions = 'จูนรถ';
+        }  
+        return $actions;
     }
 }
