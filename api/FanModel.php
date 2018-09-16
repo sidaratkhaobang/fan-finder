@@ -62,7 +62,7 @@ class FanModel
         }else if($score == 5 ){
             $place = 'เรือนจำบางขวาง';
         }else if($score == 4 ){
-            $place = 'แอสการ์ด';
+            $place = 'มหาวิทยาลัยวลัยลักษณ์';
         }else if($score == 3  ){
             $place = 'มหาวิทยาลัยวลัยลักษณ์';
         }else if($score == 2 ){

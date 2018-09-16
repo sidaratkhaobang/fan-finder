@@ -70,7 +70,7 @@ final class FanModelTest extends TestCase
     }
 
     public function testGetPlace_Dob4(){
-        $expected_result = 'แอสการ์ด';
+        $expected_result = 'มหาวิทยาลัยวลัยลักษณ์';
         $result = FanModel::getPlace('05/06/2001');
         $this->assertEquals($expected_result, $result);
     }
