@@ -11,7 +11,7 @@ class FanModel
         return [
             "nationality" => $nations,
             "place" => $place,
-            'action' => $action,
+            'action' => $action
         ];
     }
 
