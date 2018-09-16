@@ -70,7 +70,7 @@ class FanModel
         }else if($score == 1 ){
             $place = 'รัฐเวอร์เรีย';
         }else{
-            $place = 'สตาร์คทาวเวอร์';
+            $place = 'วากานด้า';
         }  
         return $place;
     }
