@@ -22,19 +22,19 @@ class FanModel
         $name_length = mb_strlen($name);
         $nationaliy = '';
         if($name_length <=5){
-            $nationaliy = 'เกาหลี';
+            $nationaliy = 'เผ่าคนเถื่อน';
         }
         elseif ($name_length <=10){
-                 $nationaliy = 'ไทย';
+                 $nationaliy = 'ไทยพุทธ';
         }
         elseif ($name_length <=15){
                  $nationaliy = 'วากานด้า';
         } 
         elseif ($name_length <=20){
-                 $nationaliy = 'จีน';
+                 $nationaliy = 'มุสลิม';
         }
         else{
-                 $nationaliy = 'Marvel';
+                 $nationaliy = 'แอสการ์ด';
         }
 
         return  $nationaliy;
@@ -50,15 +50,15 @@ class FanModel
         $score = array_sum($number_array)%10;
         $places = [
             'ถ้ำหลวง',
-            'ดาวอังคาร',
+            'ตู้กระจก',
             'ในป่า',
             'ทำเนียบรัฐบาล',
             'เรือนจำกลาง',
             'เอเวอร์เรส',
+            'ร้านกระหรี่เบอร์ตอง',
             'ใต้มหาสมุทรแปซิฟิก',
-            'วลัยลักษณ์',
-            '3เวย์',
-            'ลานชา',
+            'โพไซดอน',
+            'อาซีเอ',
         ];
         return $places[$score];
         
@@ -73,15 +73,15 @@ class FanModel
         $number_array = str_split($number_without_slash);
         $score = array_sum($number_array)%10;
         $places = [
-            'ยิงตัวตาย',
+            'เพื่อนกระทืบ',
             'ทอดไก่ด้วยน้ำมันหมู',
             'ทอดหมูด้วยน้ำมันรถ',
-            'ยำเนื้อ',
-            'ตรวจโรคเอดส์',
-            'ฉลามเเดกก',
-            'กระทืบยามหน้าหอ',
-            'หนีตำรวจ',
-            'คุยกับคนบ้า',
+            'ดูดกัญชาเผาฟอย',
+            'out door',
+            'โดนฉลามเเดกก',
+            'กระทืบคนพิการ',
+            'ตีกระหรี่กลางโรงพัก',
+            'คุยกับคนบ้าด่าคนป่วย',
             'ไถ่ตังคนเเก่เเตะคนท้อง',
         ];
         return $places[$score];

@@ -9,20 +9,20 @@ final class FanModelTest extends TestCase
         // $dob="",
         // $mobileno=""
         $expected_result = [
-            "nationality" => 'Marvel',
+            "nationality" => 'แอสการ์ด',
             "place" => 'ถ้ำหลวง',
-            'action' => 'ยำเนื้อ' 
+            'action' => 'ดูดกัญชาเผาฟอย' 
         ];
         $result = FanModel::predict('วากานด้าไม่ใช่สถานที่แต่เป็นผู้คน', '22/02/2002', '089-1010040');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetNetionaliy_NameLength4(){
-        $expected_result = 'เกาหลี';
+        $expected_result = 'เผ่าคนเถื่อน';
         $result = FanModel:: getNationality('หมวย');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetNetionaliy_NameLength7(){
-        $expected_result = 'ไทย';
+        $expected_result = 'ไทยพุทธ';
         $result = FanModel:: getNationality('กระหรี่');
         $this->assertEquals($expected_result,$result);
     }
@@ -32,12 +32,12 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result,$result);
     }
     public function testGetNetionaliy_NameLength20(){
-        $expected_result = 'จีน';
+        $expected_result = 'มุสลิม';
         $result = FanModel:: getNationality('เด็กชายสุดหล่อพ่อรวย');
         $this->assertEquals($expected_result,$result);
     }
     public function testGetNetionaliy_NameLengthmore21(){
-        $expected_result = 'Marvel';
+        $expected_result = 'แอสการ์ด';
         $result = FanModel::getNationality('วากานด้าไม่ใช่สถานที่แต่เป็นผู้คน');
         $this->assertEquals($expected_result,$result);
     }
@@ -47,7 +47,7 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace_Num1(){
-        $expected_result = 'ดาวอังคาร';
+        $expected_result = 'ตู้กระจก';
         $result = FanModel::getPlace('20/01/1601'); //11
         $this->assertEquals($expected_result,$result);
     }
@@ -72,27 +72,27 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace_Num6(){
-        $expected_result = 'ใต้มหาสมุทรแปซิฟิก';
+        $expected_result = 'ร้านกระหรี่เบอร์ตอง';
         $result = FanModel::getPlace('27/03/2002');//16
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace_Num7(){
-        $expected_result = 'วลัยลักษณ์';
+        $expected_result = 'ใต้มหาสมุทรแปซิฟิก';
         $result = FanModel::getPlace('18/04/2002');//17
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace_Num8(){
-        $expected_result = '3เวย์';
+        $expected_result = 'โพไซดอน';
         $result = FanModel::getPlace('19/04/2002');//18
         $this->assertEquals($expected_result,$result);
     }
     public function testGetPlace_Num9(){
-        $expected_result = 'ลานชา';
+        $expected_result = 'อาซีเอ';
         $result = FanModel::getPlace('28/05/2002');//19
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction0(){
-        $expected_result = 'ยิงตัวตาย';
+        $expected_result = 'เพื่อนกระทืบ';
         $result = FanModel::getAction('088-0000040');//20
         $this->assertEquals($expected_result,$result);
     }
@@ -107,32 +107,32 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction3(){
-        $expected_result = 'ยำเนื้อ';
+        $expected_result = 'ดูดกัญชาเผาฟอย';
         $result = FanModel::getAction('089-1010040');//23
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction4(){
-        $expected_result = 'ตรวจโรคเอดส์';
+        $expected_result = 'out door';
         $result = FanModel::getAction('089-1020004');//24
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction5(){
-        $expected_result = 'ฉลามเเดกก';
+        $expected_result = 'โดนฉลามเเดกก';
         $result = FanModel::getAction('089-1020104');//25
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction6(){
-        $expected_result = 'กระทืบยามหน้าหอ';
+        $expected_result = 'กระทืบคนพิการ';
         $result = FanModel::getAction('099-0102014');//26
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction7(){
-        $expected_result = 'หนีตำรวจ';
+        $expected_result = 'ตีกระหรี่กลางโรงพัก';
         $result = FanModel::getAction('099-0103104');//27
         $this->assertEquals($expected_result,$result);
     }
     public function testGetAction8(){
-        $expected_result = 'คุยกับคนบ้า';
+        $expected_result = 'คุยกับคนบ้าด่าคนป่วย';
         $result = FanModel::getAction('099-0103150');//28
         $this->assertEquals($expected_result,$result);
     }
