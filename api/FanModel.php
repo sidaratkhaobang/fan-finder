@@ -4,9 +4,9 @@ class FanModel
 {
     public static function predict($name, $dob, $mobileno)
     {
-        $nationality = $this->getNationality($name);
-        $place = $this->getPlace($dob);
-        $action = $this->getAction($mobileno);
+        $nationality = $this->FanModel->getNationality($name);
+        $place = $this->FanModel->getPlace($dob);
+        $action = $this->FanModel->getAction($mobileno);
         $data = array(
             'nationality' => $nationality,
             'place' => $place,
