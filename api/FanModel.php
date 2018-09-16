@@ -101,13 +101,13 @@ class FanModel
                 break;       
             case $sum <= 40 :
             $action = 'ล่าเสือ';
-            break;  
+                break;  
             case $sum <= 50 :
                 $action = 'เล่น PubG';
                 break;         
             case $sum <= 60 :
             $action = 'นอนแมว';
-            break;  
+                break;  
             case $sum <= 70 :
                 $action = 'ย่างไก่';
                 break;
