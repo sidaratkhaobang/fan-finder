@@ -21,9 +21,9 @@ class FanModel
         }elseif ($name_length <= 10) {
             $nationality = 'ไทย';
         }elseif ($name_length <= 15) {
-            $nationality = 'วากานด้า';
-        }elseif ($name_length <= 20) {
             $nationality = 'จีน';
+        }elseif ($name_length <= 20) {
+            $nationality = 'อังกฤษ';
         }elseif ($name_length <= 25) {
             $nationality = 'คองโก';
         }
@@ -42,7 +42,7 @@ class FanModel
         $sumnumber = (array_sum($score))%10;
         
         if ($sumnumber == 0){
-            $char = "สระว่ายน้ำ";
+            $char = "เซ่เว่น";
         }elseif ($sumnumber == 1) {
             $char = "ห้องเรียน";
         }elseif ($sumnumber == 2) {
@@ -50,9 +50,9 @@ class FanModel
         }elseif ($sumnumber == 3) {
             $char = "สนามกีฬา";
         }elseif ($sumnumber == 4) {
-            $char = "สนามฟุตบอล";
+            $char = "หอพัก";
         }elseif ($sumnumber == 5) {
-            $char = "หอดูดาว";
+            $char = "บ้านร้าง";
         }elseif ($sumnumber == 6) {
             $char = "สนามเทนนิส";
         }elseif ($sumnumber == 7) {
@@ -73,23 +73,23 @@ class FanModel
         $sumphone = ($sumnum %10) + 1 ;
 
         if ($sumphone == 1){
-            $act = "กำนั่งรถกลับหอ";
+            $act = "ติดฝนตกรอรถกลับหอ";
         }elseif ($sumphone == 2) {
-            $act = "ทำการบ้าน";
+            $act = "ทำการบ้านอยู่คนเดี่ยว";
         }elseif ($sumphone == 3) {
             $act = "กินข้าว";
         }elseif ($sumphone == 4) {
             $act = "เดินไปเรียน";
         }elseif ($sumphone == 5) {
-            $act = "กำลังฟังเพลง";
+            $act = "ฟังเพลง";
         }elseif ($sumphone == 6) {
-            $act = "กำลังคุยกับเพื่อน";
+            $act = "คุยกับเพื่อน";
         }elseif ($sumphone == 7) {
             $act = "เล่นโทรศัพท์";
         }elseif ($sumphone == 8) {
-            $act = "เดินเที่ยวในห้าง";
+            $act = "ยืนมึน";
         }elseif ($sumphone == 9) {
-            $act = "เดินจ่ายตลาด";
+            $act = "หลงทาง";
         }elseif ($sumphone == 10) {
             $act = "เล่นกับน้องเเมว";
         }
