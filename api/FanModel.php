@@ -73,25 +73,25 @@ class FanModel
         $sumphone = ($sumnumber %10) + 1 ;
 
         if ($sumphone == 1){
-            $act = "สระว่ายน้ำ";
+            $act = "กำนั่งรถกลับหอ";
         }elseif ($sumphone == 2) {
             $act = "ทำการบ้าน";
         }elseif ($sumphone == 3) {
-            $act = "โรงอาหาร";
+            $act = "กินข้าว";
         }elseif ($sumphone == 4) {
-            $act = "สนามกีฬา";
+            $act = "เดินไปเรียน";
         }elseif ($sumphone == 5) {
-            $act = "สนามฟุตบอล";
+            $act = "กำลังฟังเพลง";
         }elseif ($sumphone == 6) {
-            $act = "กำลังกินน้ำ";
+            $act = "กำลังคุยกับเพื่อน";
         }elseif ($sumphone == 7) {
-            $act = "สนามเทนนิส";
+            $act = "เล่นโทรศัพท์";
         }elseif ($sumphone == 8) {
-            $act = "ห้องสมุด";
+            $act = "เดินเที่ยวในห้าง";
         }elseif ($sumphone == 9) {
-            $act = "โลตัส";
+            $act = "เดินจ่ายตลาด";
         }elseif ($sumphone == 10) {
-            $act = "โรงพยาบาล";
+            $act = "เล่นกับน้องเเมว";
         }
         return $act;
     }

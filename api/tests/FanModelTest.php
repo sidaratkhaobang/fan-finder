@@ -15,6 +15,17 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
 
+    public function testPredict2(): void
+    {
+        $expected_result = [
+            "nationality" => 'วากานด้า',
+            "place" => 'โรงพยาบาล',
+            'action' => 'กำลังคุยกับเพื่อน' 
+        ];
+        $result = FanModel::predict('momojinarumi', '11/01/60', '0833969755');
+        $this->assertEquals($expected_result, $result);
+    }
+
     public function testGetNationality_NameLength4()
     {
         $expected_result = 'เกาหลี';
