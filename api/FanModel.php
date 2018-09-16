@@ -5,9 +5,9 @@ class FanModel
     public static function predict($name, $dob, $mobileno)
     {
         return [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่',
+            "nationality" => FanModel::getNationality($name),
+            "place" => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno),
         ];
     }
 
@@ -39,7 +39,7 @@ class FanModel
         // $DMY = $dob;
         $sum = str_replace('/', '',$dob);
         $score = str_split($sum);
-        $sumnumber = array_sum($score);
+        $sumnumber = (array_sum($score))%10;
         
         if ($sumnumber == 0){
             $char = "สระว่ายน้ำ";
@@ -68,5 +68,31 @@ class FanModel
     public static function getAction($mobileno)
     {
         // TODO
+        $action = str_split($mobileno);
+        $sumnumber = array_sum($action);
+        $sumphone = ($sumnumber %10) + 1 ;
+
+        if ($sumphone == 1){
+            $act = "สระว่ายน้ำ";
+        }elseif ($sumphone == 2) {
+            $act = "ทำการบ้าน";
+        }elseif ($sumphone == 3) {
+            $act = "โรงอาหาร";
+        }elseif ($sumphone == 4) {
+            $act = "สนามกีฬา";
+        }elseif ($sumphone == 5) {
+            $act = "สนามฟุตบอล";
+        }elseif ($sumphone == 6) {
+            $act = "กำลังกินน้ำ";
+        }elseif ($sumphone == 7) {
+            $act = "สนามเทนนิส";
+        }elseif ($sumphone == 8) {
+            $act = "ห้องสมุด";
+        }elseif ($sumphone == 9) {
+            $act = "โลตัส";
+        }elseif ($sumphone == 10) {
+            $act = "โรงพยาบาล";
+        }
+        return $act;
     }
 }

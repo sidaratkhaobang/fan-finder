@@ -7,11 +7,11 @@ final class FanModelTest extends TestCase
     public function testPredict(): void
     {
         $expected_result = [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่' 
+            "nationality" => 'ไทย',
+            "place" => 'สนามกีฬา',
+            'action' => 'ทำการบ้าน' 
         ];
-        $result = FanModel::predict($name, $dob, $mobileno);
+        $result = FanModel::predict('momoji', '18/02/39', '0833969553');
         $this->assertEquals($expected_result, $result);
     }
 
@@ -109,7 +109,7 @@ final class FanModelTest extends TestCase
     public function testPlace_score8()
     {
         $expected_result = 'โลตัส';
-        $result = FanModel::getPlace('08/00/00');
+        $result = FanModel::getPlace('09/00/90');
         $this->assertEquals($expected_result, $result);
     }
 
@@ -117,6 +117,13 @@ final class FanModelTest extends TestCase
     {
         $expected_result = 'โรงพยาบาล';
         $result = FanModel::getPlace('09/00/00');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testAction_Phone0()
+    {
+        $expected_result = 'ทำการบ้าน';
+        $result = FanModel::getAction('0833969553');
         $this->assertEquals($expected_result, $result);
     }
 } 
