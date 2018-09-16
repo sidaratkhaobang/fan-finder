@@ -81,10 +81,10 @@ class FanModel
             $place = 'ศุนย์คอม';
         }
         else if ($mod == 8) {
-            $place = '7-11';
+            $place = 'family mart';
         }
         else if ($mod == 9) {
-            $place = 'family mart';
+            $place = '7-11';
         }
 
         return $place;
@@ -104,7 +104,7 @@ class FanModel
             $action = 'กำลังพลอดรักกับแฟนเก่า';
         }
         else if ($arr1[9] == 2){
-            $action = 'กำลังหางูกิน';
+            $action = 'กำลังซื้อนมชมพู';
         }
         else if ($arr1[9] == 3){
             $action = 'กำลังยืนฉี่ในห้องน้ำชาย';

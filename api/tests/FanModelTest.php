@@ -97,13 +97,13 @@ final class FanModelTest extends TestCase
     }
     public function testPlace_sumdate8()
     {
-        $expected_result = '7-11';
+        $expected_result = 'family mart';
         $result = FanModel::getPlace('19/11/2004');
         $this->assertEquals($expected_result, $result);
     }
     public function testPlace_sumdate9()
     {
-        $expected_result = 'family mart';
+        $expected_result = '7-11';
         $result = FanModel::getPlace('29/11/2004');
         $this->assertEquals($expected_result, $result);
     }
@@ -122,7 +122,7 @@ final class FanModelTest extends TestCase
     }
     public function testgetAction_mobileno2()
     {
-        $expected_result = 'กำลังหางูกิน';
+        $expected_result = 'กำลังซื้อนมชมพู';
         $result = FanModel::getAction('1234567892');
         $this->assertEquals($expected_result, $result);
     }
