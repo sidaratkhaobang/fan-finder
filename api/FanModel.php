@@ -28,15 +28,16 @@ class FanModel
     public static function getPlace($dob)
     {
         $place='';
-        $sum=0;
+        //$sum=0;
         $rpDob = str_replace('/' ,'', $dob);
         $spDob = str_split($rpDob);
-        //ใช้arraysum
-        for($i=0 ; $i<count($spDob) ; $i++){
-            $rpDob = (int)($spDob[$i]);
-            $sum = $sum+$rpDob;
-        }
-        $score= $sum%10;
+        
+        $score = array_sum($spDob)%10;
+        // for($i=0 ; $i<count($spDob) ; $i++){
+        //     $rpDob = (int)($spDob[$i]);
+        //     $sum = $sum+$rpDob;
+        // }
+        // $score= $sum%10;
         switch($score){
             case 0: $place='โซล';break;
             case 1: $place='นครศรีธรรมราช';break;
@@ -54,6 +55,20 @@ class FanModel
 
     public static function getAction($mobileno)
     {
-        // TODO
+        $spMBN = str_split($mobileno);
+        $score = array_sum($spMBN)%10;
+        $action = [
+            'ทอดไก่',
+            'เดินแบบ',
+            'อาบน้ำ',
+            'โบกแท่งไฟ',
+            'แกะก้างปลา',
+            'ตั้งใจเรียนวิชาเทสติ้ง',
+            'ปล้นธนาคาร',
+            'เล่นปังย่า',
+            'เล่นโยวกัง',
+            'นอนหิว',
+        ];
+        return $action[$score];
     }
 }

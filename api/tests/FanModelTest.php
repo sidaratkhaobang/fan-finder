@@ -4,7 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 final class FanModelTest extends TestCase
 {
-    public function testPredict(): void
+    public function testPredict()
     {
         $expected_result = [
             "nationality" => 'อังกฤษ',
@@ -102,6 +102,66 @@ final class FanModelTest extends TestCase
     public function testgetPlace_dob9(){
         $expected_result = 'เขาสะแกกรัง';
         $result = Fanmodel::getPlace('07/01/2018');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno0(){
+        $expected_result = 'ทอดไก่';
+        $result = Fanmodel::getAction('0811000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno1(){
+        $expected_result = 'เดินแบบ';
+        $result = Fanmodel::getAction('0821000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno2(){
+        $expected_result = 'อาบน้ำ';
+        $result = Fanmodel::getAction('0822000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno3(){
+        $expected_result = 'โบกแท่งไฟ';
+        $result = Fanmodel::getAction('0823000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno4(){
+        $expected_result = 'แกะก้างปลา';
+        $result = Fanmodel::getAction('0824000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno5(){
+        $expected_result = 'ตั้งใจเรียนวิชาเทสติ้ง';
+        $result = Fanmodel::getAction('0825000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno6(){
+        $expected_result = 'ปล้นธนาคาร';
+        $result = Fanmodel::getAction('0826000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno7(){
+        $expected_result = 'เล่นปังย่า';
+        $result = Fanmodel::getAction('0827000000');
+        $this->assertEquals($expected_result,$result);
+    }
+    
+    public function testgetAction_mobileno8(){
+        $expected_result = 'เล่นโยวกัง';
+        $result = Fanmodel::getAction('0828000000');
+        $this->assertEquals($expected_result,$result);
+    }
+
+    public function testgetAction_mobileno9(){
+        $expected_result = 'นอนหิว';
+        $result = Fanmodel::getAction('0829000000');
         $this->assertEquals($expected_result,$result);
     }
     
