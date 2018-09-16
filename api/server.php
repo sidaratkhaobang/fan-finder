@@ -4,9 +4,9 @@ require_once __DIR__ . '/FanModel.php';
 
 $app = new \Klein\Klein();
 
-$app->respond('GET', '/', function ($request, $response) {
+$app->respond('GET', '/hello', function ($request, $response) {
     return $response->json([
-        "status" => "ok",
+        "status" => "ok", 
         "message" => "hello world",
     ]);
 });
