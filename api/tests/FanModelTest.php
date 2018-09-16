@@ -9,7 +9,7 @@ final class FanModelTest extends TestCase
         $name='หมวย';
         $dob='05/01/2018';
         $mobileno='0825000000';
-        $expected_result = $data = array(
+        $expected_result = array(
             'nationality' => 'เกาหลี',
             'place' => 'ดอยผาหมี',
             'action' => 'ตั้งใจเรียนวิชาเทสติ้ง'
