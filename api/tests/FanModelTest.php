@@ -109,43 +109,43 @@ final class FanModelTest extends TestCase
         public function testgetAction0()
         {
             $expected_result = 'จับจระเข้';
-            $result = FanModel ::getPlace('090-1234560');
+            $result = FanModel ::getAction('090-1234560');
             $this->assertEquals($expected_result,$result);
         }
         public function testgetAction1()
         {
             $expected_result = 'กินกบ';
-            $result = FanModel ::getPlace('090-1234561');//29%10=9
+            $result = FanModel ::getAction('090-1234561');//29%10=9
             $this->assertEquals($expected_result,$result);
         }
         public function testgetAction2()
         {
             $expected_result = 'ตกเครื่องบิน';
-            $result = FanModel ::getPlace('060-0725360');//29%10=9
+            $result = FanModel ::getAction('060-0725360');//29%10=9
             $this->assertEquals($expected_result,$result);
         }
         public function testgetAction3()
         {
             $expected_result = 'เขียนโค้ด';
-            $result = FanModel ::getPlace('060-0702536');//29%10=9
+            $result = FanModel ::getAction('060-0702536');//29%10=9
             $this->assertEquals($expected_result,$result);
         }
         public function testgetAction4()
         {
             $expected_result = 'เรียนอาจารย์ชายในฝัน';
-            $result = FanModel ::getPlace('060-0702536');//29%10=9
+            $result = FanModel ::getAction('060-0702536');//29%10=9
             $this->assertEquals($expected_result,$result);
         }
         public function testgetAction5()
         {
             $expected_result = 'ล่องเรือในเบอมิวด้า';
-            $result = FanModel ::getPlace('060-0702536');//29%10=9
+            $result = FanModel ::getAction('060-0702536');//29%10=9
             $this->assertEquals($expected_result,$result);
         }
         public function testgetAction6()
         {
             $expected_result = 'ไปดาวอังคาร';
-            $result = FanModel ::getPlace('083-5952690');
+            $result = FanModel ::getAction('083-5952690');
             $this->assertEquals($expected_result,$result);
         }
         
