@@ -106,17 +106,17 @@ final class FanModelTest extends TestCase
 
     //test getAction 10 testcases
 
-    public function testGetAction0(){
-        $expected_result = 'จูนรถ';
-        $result = FanModel::getAction('0805171080');
-        $this->assertEquals($expected_result, $result);
-    }
-
-    // public function testGetAction1(){
-    //     $expected_result = 'นึ่งซาลาเปา';
-    //     $result = FanModel::getAction('0805181080');
+    // public function testGetAction0(){
+    //     $expected_result = 'จูนรถ';
+    //     $result = FanModel::getAction('0805171080');
     //     $this->assertEquals($expected_result, $result);
     // }
+
+    public function testGetAction1(){
+        $expected_result = 'นึ่งซาลาเปา';
+        $result = FanModel::getAction('0805181080');
+        $this->assertEquals($expected_result, $result);
+    }
 
     // public function testGetAction2(){
     //     $expected_result = 'มองนม';

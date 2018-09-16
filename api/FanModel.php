@@ -86,24 +86,24 @@ class FanModel
         switch ($point) {
             case 1 : $actions = 'นึ่งซาลาเปา';
                 break;
-            case 2 : $actions = 'มองนม';
-                break;
-            case 3 : $actions = 'จาม';
-                break;
-            case 4 : $actions = 'ขี้';
-                break;
-            case 5 : $actions = 'ชักว่าว';
-                break;
-            case 6 : $actions = 'เล่นเกม';
-                break;
-            case 7 : $actions = 'ดูหนัง';
-                break;
-            case 8 : $actions = 'ดูคอนเสิร์ด';
-                break;
-            case 9 : $actions = 'กินข้าว';
-                break;
-            default:
-                $actions = 'จูนรถ';
+            // case 2 : $actions = 'มองนม';
+            //     break;
+            // case 3 : $actions = 'จาม';
+            //     break;
+            // case 4 : $actions = 'ขี้';
+            //     break;
+            // case 5 : $actions = 'ชักว่าว';
+            //     break;
+            // case 6 : $actions = 'เล่นเกม';
+            //     break;
+            // case 7 : $actions = 'ดูหนัง';
+            //     break;
+            // case 8 : $actions = 'ดูคอนเสิร์ด';
+            //     break;
+            // case 9 : $actions = 'กินข้าว';
+            //     break;
+            // default:
+            //     $actions = 'จูนรถ';
         }
     }
 }
