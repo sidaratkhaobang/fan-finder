@@ -80,41 +80,33 @@ class FanModel
         }
         return $place;
 
-            // if ($day_birthday=0){
-            //     $place ='Paris'; 
-            // }
-            // else if ($day_birthday=1){
-            //     $place ='Soul'; 
-            // }
-            // else if ($day_birthday=2){
-            //     $place ='bangkok'; 
-            // }
-            // else if ($day_birthday=3){
-            //     $place ='London'; 
-            // }
-            // else if ($day_birthday=4){
-            //     $place ='japan'; 
-            // }
-            // else if ($day_birthday=5){
-            //     $place ='USA'; 
-            // }
-            // else if ($day_birthday=6){
-            //     $place ='Sweden'; 
-            // }
-            // else if ($day_birthday=7){
-            //     $place ='Arizona'; 
-            // }
-            // else if ($day_birthday=8){
-            //     $place ='Spain'; 
-            // }
-            // else {
-            //     $place ='peru'; 
-            // }
-        }
+    }
 
     
     public static function getAction($mobileno)
     {
         // TODO
+        $sum=0;
+        $num_phone = str_replace('-','',$mobileno);
+        $num_telephone = str_split($num_phone);
+        $action = '';
+        foreach($num_telephone as $value){
+       
+            $sum += intval($value);
+        }
+        switch ($sum%10){
+            case 0: $action = 'จับจระเข้' ; break;
+            case 1: $action = 'กินกบ'; break;
+            case 2: $action = 'ตกเครื่องบิน'; break;
+            case 3: $action = 'เขียนโค้ด';  break;
+            case 4: $action = 'เรียนอาจารย์ชายในฝัน' ;break;
+            case 5: $action = 'ล่องเรือในเบอมิวด้า'; break;
+            case 6: $action = 'ไปดาวอังคาร'; break;
+
+            
+        }
+        return $action;
+
+
     }
 }
