@@ -42,6 +42,28 @@ class FanModel
         // 11/05/2540 (DD/MM/YYYY)
         //score = (1+1+0+5+2+5+4+0) %10
         //Hint: string_replace
+        $place=''; //$sum=0;
+        $rpDob = str_replace('/' ,'', $dob);
+        $spDob = str_split($rpDob);
+        $score = array_sum($spDob)%10;
+        // for($i=0 ; $i<count($spDob) ; $i++){
+        //     $rpDob = (int)($spDob[$i]);
+        //     $sum = $sum+$rpDob;
+        // }
+        // $score= $sum%10;
+        switch($score){
+            case 0: $place='Korea';break;
+            case 1: $place='USA';break;
+            case 2: $place='Bankok';break;
+            case 3: $place='Market';break;
+            case 4: $place='Gana';break;
+            case 5: $place='Concert';break;
+            case 6: $place='Colombia';break;
+            case 7: $place='Japan';break;
+            case 8: $place='Germany';break;
+            case 9: $place='Saudi-Arabia';break;
+        }
+        return $place;
     }
 
     public static function getAction($mobileno)
