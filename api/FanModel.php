@@ -22,7 +22,7 @@ class FanModel
         $name_length = mb_strlen($name);
         $nationality = '';
         if ($name_length <= 5){
-            $nationality = 'เกาหลี';
+            $nationality = 'เกาหลีเหนือ';
         }
         elseif($name_length<=10){
             $nationality = 'ไทย';
