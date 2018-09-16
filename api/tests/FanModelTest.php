@@ -148,6 +148,24 @@ final class FanModelTest extends TestCase
             $result = FanModel ::getAction('0600702533');
             $this->assertEquals($expected_result,$result);
         }
+        public function testgetAction7()
+        {
+            $expected_result = 'กินกระเพราะปลา';
+            $result = FanModel ::getAction('0600702534');
+            $this->assertEquals($expected_result,$result);
+        }
+        public function testgetAction8()
+        {
+            $expected_result = 'ย่างหมูปิ้ง';
+            $result = FanModel ::getAction('0610702534');
+            $this->assertEquals($expected_result,$result);
+        }
+        public function testgetAction9()
+        {
+            $expected_result = 'แย่งกล้วยลิง';
+            $result = FanModel ::getAction('0620702534');
+            $this->assertEquals($expected_result,$result);
+        }
         
 } 
 

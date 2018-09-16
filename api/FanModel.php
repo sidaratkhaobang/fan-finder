@@ -25,7 +25,7 @@ class FanModel
             $nationality ='เกาหลี'; 
         }
         else if ($name_length<=10){
-            $nationality ='ไทย'; 
+            $nationality ='ญี่ปุ่น'; 
         }
         else if ($name_length<=15){
             $nationality ='วากานด้า'; 
@@ -101,6 +101,10 @@ class FanModel
             case 4: $action = 'เรียนอาจารย์ชายในฝัน' ;break;
             case 5: $action = 'ล่องเรือในเบอมิวด้า'; break;
             case 6: $action = 'ไปดาวอังคาร'; break;
+            case 7: $action = 'กินกระเพราะปลา'; break;
+            case 8: $action = 'ย่างหมูปิ้ง'; break;
+            case 9: $action = 'แย่งกล้วยลิง'; break;
+
 
             
         }
