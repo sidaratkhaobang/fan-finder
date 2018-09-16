@@ -9,9 +9,9 @@ class FanModel
         // $action = FanModel::getAction($mobileno);
 
         return [
-            "nationality" => FanModel::getNationality($name),
-            "place" => FanModel::getPlace($dob),
-            "action" => FanModel::getAction($mobileno)
+            'nationality' => FanModel::getNationality($name),
+            'place' => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno)
         ];
     }
 

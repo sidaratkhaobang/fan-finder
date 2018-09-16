@@ -7,8 +7,8 @@ final class FanModelTest extends TestCase
     public function testPredict()
     {
         $expected_result = [
-            "nationality" => 'เกาหลี',
-            "place" => 'วากานด้า',
+            'nationality' => 'เกาหลี',
+            'place' => 'วากานด้า',
             'action' => 'จาม' 
         ];
         $result = FanModel::predict('Puthy', '07/15/1998', '0935754721');
