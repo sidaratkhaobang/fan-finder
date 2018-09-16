@@ -4,10 +4,14 @@ class FanModel
 {
     public static function predict($name, $dob, $mobileno)
     {
+        $nations = self::getNationality($name);
+        $place = self::getPlace($dob);
+        $action = self::getAction($mobileno;
+
         return [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่',
+            "nationality" => $nations,
+            "place" => $place,
+            'action' => $action,
         ];
     }
 
