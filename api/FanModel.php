@@ -4,13 +4,13 @@ class FanModel
 {
     public static function predict($name, $dob, $mobileno)
     {
-        $nationality = $this->FanModel->getNationality($name);
-        $place = $this->FanModel->getPlace($dob);
-        $action = $this->FanModel->getAction($mobileno);
+        // $nationality = getNationality($name);
+        // $place = getPlace($dob);
+        // $action = getAction($mobileno);
         $data = array(
-            'nationality' => $nationality,
-            'place' => $place,
-            'action' => $action
+            'nationality' => getNationality($name),
+            'place' => getPlace($dob),
+            'action' => getAction($mobileno)
         );
         return $data;
     }
