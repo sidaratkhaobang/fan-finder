@@ -66,5 +66,21 @@ class FanModel
     public static function getAction($mobileno)
     {
         // TODO
+        $number_without_slash = str_replace('-', '', $mobileno);
+        $number_array = str_split($number_without_slash);
+        $sumnumber = array_sum($number_array)%10;
+        $action = [
+            'ขี่รถ',
+            'ขี่หมา',
+            'ทำอาหาร',
+            'กินไก่',
+            'ตีหม้อ',
+            'หาหอย',
+            'ดูหนัง',
+            'วิ่งเล่น',
+            'สว่าย้ำ',
+            'ดำน้ำ',
+        ];
+        return $action[$sumnumber];
     }
 }

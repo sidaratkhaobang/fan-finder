@@ -54,4 +54,18 @@ final class FanModelTest extends TestCase
         $result = FanModel::getPlace('01/01/2001');
         $this->assertEquals($expected_result, $result);
     }
+
+    public function testgetAction1(){
+
+        $expected_result = 'หาหอย';
+        $result = FanModel::getAction('0-12345-6789');
+        $this->assertEquals($expected_result, $result);
+    }
+
+    public function testgetAction2(){
+
+        $expected_result = 'หาหอย';
+        $result = FanModel::getAction('0-9876-54321');
+        $this->assertEquals($expected_result, $result);
+    }
 }
