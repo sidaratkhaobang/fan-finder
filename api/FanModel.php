@@ -8,9 +8,10 @@ class FanModel
             // "nationality" => 'อังกฤษ1',
             // "place" => 'ยอดดอยอันหนาวเหน็บ',
             // 'action' => 'ปิ้งไก่',
-            "nationality" => 'ไทย',
-            "place" => 'อาคารเรียนรวม 3',
-            'action' => 'ขึ้นบันไดอาคารเรียนรวม 3'
+            "nationality" => FanModel::getNationality($name),
+            "place" =>  FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno)
+
         ];
     }
 
@@ -60,14 +61,14 @@ class FanModel
             case 3:  $place = 'ร้านขายยา';break;
             case 4:  $place = 'ที่โบสถ์เรื่องเดอะก๊ะ';break;
             case 5:  $place = 'ในหม้อง';break;
-            case 6:  $place = 'เล้าหมู';break;
+            case 6:  $place = 'อาคารเรียนรวม 3';break;
             case 7:  $place = 'ในใจ';break;
             case 8:  $place = 'ในฝัน';break;
             case 9:  $place = 'ที่ห้องแฟนเก่า';break;
             // default:
         };
         return $place;
-    // return "วัด";
+    
     }
         //11/05/2540(DD/MM/YY)
         // sum = (1+1+0+5+2+5+4+0)%10
@@ -108,5 +109,9 @@ class FanModel
             
         };
         return $action;
+
+
+
+        
     }
 }

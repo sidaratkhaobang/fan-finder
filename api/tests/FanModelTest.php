@@ -16,11 +16,11 @@ final class FanModelTest extends TestCase
         //     'action' => 'ปิ้งไก่' 
         // ];
         $expected_result = [
-            "nationality" => 'ไทย',
-            "place" => 'อาคารเรียนรวม 3',
-            'action' => 'ขึ้นบันไดอาคารเรียนรวม 3' 
+            "nationality" => 'เกาหลี',
+            "place" => 'ในหม้อง',
+            'action' => 'ส่งการบ้านอาจารย์อุหมาด' 
         ];
-        $result = FanModel::predict($name, $dob, $mobileno);
+        $result = FanModel::predict('บี', '25/07/2540', '0993011414');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetNationality_NameLengthlt5()
@@ -84,7 +84,7 @@ final class FanModelTest extends TestCase
         $this->assertEquals($expected_result, $result);
     }
     public function testGetdob_6(){
-        $expected_result = 'เล้าหมู';
+        $expected_result = 'อาคารเรียนรวม 3';
         $result = FanModel :: getPlace('01/08/2546');
         $this->assertEquals($expected_result, $result);
     }
