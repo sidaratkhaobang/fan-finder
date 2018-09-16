@@ -7,6 +7,7 @@ class FanModel
         // $nationality = getNationality($name);
         // $place = getPlace($dob);
         // $action = getAction($mobileno);
+        
         $data = array(
             'nationality' => getNationality($name),
             'place' => getPlace($dob),
