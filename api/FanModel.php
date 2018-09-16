@@ -78,7 +78,7 @@ class FanModel
         else if($score == 8){
             $getPlace = 'เขาช้างเผือก2';
         }
-        else{
+        else if($score == 9){
             $getPlace = 'เกาะตาชัย';
         }
         return $getPlace;
@@ -111,7 +111,7 @@ class FanModel
             case 6: $getAction = 'ว่ายน้ำ';  break;
             case 7: $getAction = 'แตกไฟล์' ;break;
             case 8: $getAction = 'หกล้ม' ;break;
-          
+            case 9: $getAction = 'เดินอยู่บนคันนา' ;break;
             
         }
         return $getAction;

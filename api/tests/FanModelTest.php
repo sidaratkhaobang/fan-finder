@@ -105,58 +105,63 @@ final class FanModelTest extends TestCase
     public function testGetAction0()
     {
         $expected_result = 'ตกปลา';
-        $result = FanModel::getAction('0');
+        $result = FanModel::getAction('000-000000');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetAction1()
     {
         $expected_result = 'ขี่ม้า';
-        $result = FanModel::getAction('1');
+        $result = FanModel::getAction('001-0000000');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetAction2()
     {
         $expected_result = 'ล่ายีราฟ';
-        $result = FanModel::getAction('2');
+        $result = FanModel::getAction('002-0000000');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetAction3()
     {
         $expected_result = 'กำราบมังกร';
-        $result = FanModel::getAction('3');
+        $result = FanModel::getAction('003-0000000');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetAction4()
     {
         $expected_result = 'ขี่เรือ';
-        $result = FanModel::getAction('4');
+        $result = FanModel::getAction('004-0000000');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetAction5()
     {
         $expected_result = 'เต้นbnk';
-        $result = FanModel::getAction('5');
+        $result = FanModel::getAction('005-0000000');
         $this->assertEquals($expected_result, $result);
     }    
     public function testGetAction6()
     {
         $expected_result = 'ว่ายน้ำ';
-        $result = FanModel::getAction('6');
+        $result = FanModel::getAction('006-0000000');
         $this->assertEquals($expected_result, $result);
     }    
     public function testGetAction7()
     {
         $expected_result = 'แตกไฟล์';
-        $result = FanModel::getAction('7');
+        $result = FanModel::getAction('007-0000000');
         $this->assertEquals($expected_result, $result);
     }
     public function testGetAction8()
     {
         $expected_result = 'หกล้ม';
-        $result = FanModel::getAction('8');
+        $result = FanModel::getAction('008-0000000');
         $this->assertEquals($expected_result, $result);
     }
-    
+    public function testGetAction9()
+    {
+        $expected_result = 'เดินอยู่บนคันนา';
+        $result = FanModel::getAction('009-0000000');
+        $this->assertEquals($expected_result, $result);
+    }
     
 
 }
