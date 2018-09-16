@@ -6,7 +6,7 @@ class FanModel
     {
         $nations = self::getNationality($name);
         $place = self::getPlace($dob);
-        $action = self::getAction($mobileno;
+        $action = self::getAction($mobileno);
 
         return [
             "nationality" => $nations,
