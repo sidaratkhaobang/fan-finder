@@ -5,9 +5,9 @@ class FanModel
     public static function predict($name, $dob, $mobileno)
     {
         return [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่' 
+            "nationality" => FanModel::getNationality($name),
+            "place" => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno) 
         ];
     }
 
@@ -61,6 +61,23 @@ class FanModel
 
     public static function getAction($mobileno)
     {
-        // TODO
+        $pos = strpos($mobileno, '9');
+        if ($pos === false) {
+            $pos = rand(0, 9);
+        }
+        $pos = $pos%10;
+        $actions = [
+            'ปิ้งไก่',
+            'ขโมยเงินบริจาค',
+            'รับน้อง',
+            'ดูแนนโน๊ะ',
+            'นั่งส้วม',
+            'จีบผู้ชาย',
+            'จีบผู้หญิง',
+            'เรียน CI/CD',
+            'ไถเงิน',
+            'รอรถไฟฟ้า',
+        ];
+        return $actions[$pos];
     }
 }
