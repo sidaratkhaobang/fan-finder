@@ -5,9 +5,9 @@ class FanModel
     public static function predict($name, $dob, $mobileno)
     {
         return [
-            "nationality" => 'อังกฤษ',
-            "place" => 'ยอดดอยอันหนาวเหน็บ',
-            'action' => 'ปิ้งไก่' 
+            "nationality" => FanModel::getNationality($name),
+            "place" => FanModel::getPlace($dob),
+            'action' => FanModel::getAction($mobileno)
         ];
     }
 
@@ -16,51 +16,100 @@ class FanModel
         // TODO
         // 1-5: เกาหลี
         // 6-10: ไทย
-        // 11-15: วากานด้า
-        // 16-20: จีน
-        // 21++: ชาติหน้า
+        //11-15: วากานด้า
+        //16-20: จีน
+        //21++: ชาติหน้า
         $name_length = mb_strlen($name);
-        $nationality = '';
-        if ($name_length <= 5) {
-            $nationality = 'เกาหลี';
-        } elseif ($name_length <= 10) {
-            $nationality = 'ไทย';
-        } elseif ($name_length <= 15) {
-            $nationality = 'วากานด้า';
-        } elseif ($name_length <= 20) {
-            $nationality = 'จีน';
-        } else {
-            $nationality = 'ชาติหน้า';
+        $nationality ='';
+        if ($name_length<=5){
+            $nationality ='เกาหลี'; 
         }
-        return $nationality;
+        else if ($name_length<=10){
+            $nationality ='ญี่ปุ่น'; 
+        }
+        else if ($name_length<=15){
+            $nationality ='วากานด้า'; 
+        }
+        else if ($name_length<=21){
+            $nationality ='จีน'; 
+        }
+        else{
+            $nationality ='ชาติหน้า'; 
+        }
+        return $nationality; 
+
     }
 
     public static function getPlace($dob)
     {
         // TODO
-        // 01/05/2540 (DD/MM/YYYY)
+        // 11/05/2540 (DD/MM/YYYY)
         // score = (1+1+0+5+2+5+4+0)%10
-        // HINT: str_replace, str_split, array_sum
-        $number_without_slash = str_replace('/', '', $dob);
-        $number_array = str_split($number_without_slash);
-        $score = array_sum($number_array)%10;
-        $places = [
-            'โมโกจู',
-            'เกาะเสม็ด',
-            'เกาะไหง',
-            'หมู่บ้านคีรีวง',
-            'ตลาดร่มหุบ',
-            'สวนผึ้ง',
-            'ทองผาภูมิ',
-            'ภูป่าเปาะ',
-            'สวนน้ำ',
-            'ถ้ำปลา',
-        ];
-        return $places[$score];
+        // 0:
+        // 1:
+        // 2:
+        // 3:
+        // 4:
+        // 5:
+        // 6:
+        // 7:
+        // 8:
+        // 9:
+        //HINT: str_replace, str_split
+        $sum=0;
+        $day_birthday = str_replace('/','',$dob);
+        $num_birthday = str_split($day_birthday);
+        $place = '';
+        foreach($num_birthday as $value){
+       
+            $sum += intval($value);
+        }
+        switch ($sum%10){
+            case 0: $place = 'Paris'; break;
+            case 1: $place = 'Soul' ; break;
+            case 2: $place = 'bangkok'; break;
+            case 3: $place = 'London'; break;
+            case 4: $place = 'japan'; break;
+            case 5: $place = 'USA' ; break;
+            case 6: $place = 'Sweden';  break;
+            case 7: $place = 'Arizona' ;break;
+            case 8: $place = 'Spain'; break;
+            case 9: $place = 'peru'; break;
+
+            
+        }
+        return $place;
+
     }
 
+    
     public static function getAction($mobileno)
     {
         // TODO
+        $sum=0;
+        $num_phone = str_split($mobileno);
+        $action = '';
+        foreach($num_phone as $value){
+       
+            $sum += intval($value);
+        }
+        switch ($sum%10){
+            case 0: $action = 'จับจระเข้' ; break;
+            case 1: $action = 'กินกบ'; break;
+            case 2: $action = 'ตกเครื่องบิน'; break;
+            case 3: $action = 'เขียนโค้ด';  break;
+            case 4: $action = 'เรียนอาจารย์ชายในฝัน' ;break;
+            case 5: $action = 'ล่องเรือในเบอมิวด้า'; break;
+            case 6: $action = 'ไปดาวอังคาร'; break;
+            case 7: $action = 'กินกระเพราะปลา'; break;
+            case 8: $action = 'ย่างหมูปิ้ง'; break;
+            case 9: $action = 'แย่งกล้วยลิง'; break;
+
+
+            
+        }
+        return $action;
+
+
     }
 }

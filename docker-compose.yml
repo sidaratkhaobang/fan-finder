@@ -3,7 +3,7 @@ services:
   web:
     image: nginx:1.15-alpine
     ports: 
-      - 2000:80
+      - 2401:80
     volumes:
       - ./web:/usr/share/nginx/html
   api:
@@ -11,7 +11,6 @@ services:
       context: ./
       dockerfile: _api.Dockerfile
     ports:
-      - 2001:80
+      - 2402:80
     volumes:
       - ./api:/var/www/html/
-    # command: composer install
